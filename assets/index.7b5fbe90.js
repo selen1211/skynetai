@@ -16,8 +16,8 @@
       o.crossorigin === "use-credentials"
         ? (i.credentials = "include")
         : o.crossorigin === "anonymous"
-        ? (i.credentials = "omit")
-        : (i.credentials = "same-origin"),
+          ? (i.credentials = "omit")
+          : (i.credentials = "same-origin"),
       i
     );
   }
@@ -35,7 +35,7 @@ function Ln(e, t) {
   return t ? (o) => !!s[o.toLowerCase()] : (o) => !!s[o];
 }
 const Ya =
-    "itemscope,allowfullscreen,formnovalidate,ismap,nomodule,novalidate,readonly",
+  "itemscope,allowfullscreen,formnovalidate,ismap,nomodule,novalidate,readonly",
   Ha = Ln(Ya);
 function ei(e) {
   return !!e || e === "";
@@ -80,31 +80,31 @@ function be(e) {
   return t.trim();
 }
 const Ie = (e) =>
-    me(e)
-      ? e
-      : e == null
+  me(e)
+    ? e
+    : e == null
       ? ""
       : H(e) || (pe(e) && (e.toString === oi || !W(e.toString)))
-      ? JSON.stringify(e, ti, 2)
-      : String(e),
+        ? JSON.stringify(e, ti, 2)
+        : String(e),
   ti = (e, t) =>
     t && t.__v_isRef
       ? ti(e, t.value)
       : Jt(t)
-      ? {
+        ? {
           [`Map(${t.size})`]: [...t.entries()].reduce(
             (s, [n, o]) => ((s[`${n} =>`] = o), s),
             {}
           ),
         }
-      : si(t)
-      ? { [`Set(${t.size})`]: [...t.values()] }
-      : pe(t) && !H(t) && !ii(t)
-      ? String(t)
-      : t,
+        : si(t)
+          ? { [`Set(${t.size})`]: [...t.values()] }
+          : pe(t) && !H(t) && !ii(t)
+            ? String(t)
+            : t,
   ie = {},
   Ut = [],
-  Ve = () => {},
+  Ve = () => { },
   za = () => !1,
   Ka = /^on[^a-z]/,
   Qs = (e) => Ka.test(e),
@@ -161,12 +161,12 @@ const Xa = () =>
     typeof globalThis < "u"
       ? globalThis
       : typeof self < "u"
-      ? self
-      : typeof window < "u"
-      ? window
-      : typeof global < "u"
-      ? global
-      : {});
+        ? self
+        : typeof window < "u"
+          ? window
+          : typeof global < "u"
+            ? global
+            : {});
 let et;
 class qa {
   constructor(t = !1) {
@@ -174,8 +174,8 @@ class qa {
       (this.effects = []),
       (this.cleanups = []),
       !t &&
-        et &&
-        ((this.parent = et),
+      et &&
+      ((this.parent = et),
         (this.index = (et.scopes || (et.scopes = [])).push(this) - 1));
   }
   run(t) {
@@ -215,9 +215,9 @@ function $a(e, t = et) {
   t && t.active && t.effects.push(e);
 }
 const Mn = (e) => {
-    const t = new Set(e);
-    return (t.w = 0), (t.n = 0), t;
-  },
+  const t = new Set(e);
+  return (t.w = 0), (t.n = 0), t;
+},
   ri = (e) => (e.w & wt) > 0,
   ci = (e) => (e.n & wt) > 0,
   er = ({ deps: e }) => {
@@ -256,7 +256,7 @@ class Yn {
     if (!this.active) return this.fn();
     let t = Ke,
       s = _t;
-    for (; t; ) {
+    for (; t;) {
       if (t === this) return;
       t = t.parent;
     }
@@ -282,7 +282,7 @@ class Yn {
     Ke === this
       ? (this.deferStop = !0)
       : this.active &&
-        (uo(this), this.onStop && this.onStop(), (this.active = !1));
+      (uo(this), this.onStop && this.onStop(), (this.active = !1));
   }
 }
 function uo(e) {
@@ -397,14 +397,14 @@ function Hn(e = !1, t = !1) {
     return (Fn(o) ? fi.has(o) : sr(o)) || (e || Me(n, "get", o), t)
       ? r
       : xe(r)
-      ? a && Rn(o)
-        ? r
-        : r.value
-      : pe(r)
-      ? e
-        ? mi(r)
-        : Zs(r)
-      : r;
+        ? a && Rn(o)
+          ? r
+          : r.value
+        : pe(r)
+          ? e
+            ? mi(r)
+            : Zs(r)
+          : r;
   };
 }
 const rr = ui(),
@@ -550,19 +550,19 @@ function pt(e) {
 }
 function pr() {
   const e = {
-      get(i) {
-        return bs(this, i);
-      },
-      get size() {
-        return Cs(this);
-      },
-      has: ws,
-      add: ho,
-      set: go,
-      delete: mo,
-      clear: vo,
-      forEach: Is(!1, !1),
+    get(i) {
+      return bs(this, i);
     },
+    get size() {
+      return Cs(this);
+    },
+    has: ws,
+    add: ho,
+    set: go,
+    delete: mo,
+    clear: vo,
+    forEach: Is(!1, !1),
+  },
     t = {
       get(i) {
         return bs(this, i, !1, !0);
@@ -626,10 +626,10 @@ function Un(e, t) {
     o === "__v_isReactive"
       ? !e
       : o === "__v_isReadonly"
-      ? e
-      : o === "__v_raw"
-      ? n
-      : Reflect.get(V(s, o) && o in n ? s : n, o, i);
+        ? e
+        : o === "__v_raw"
+          ? n
+          : Reflect.get(V(s, o) && o in n ? s : n, o, i);
 }
 const _r = { get: Un(!1, !1) },
   yr = { get: Un(!1, !0) },
@@ -723,7 +723,7 @@ class Br {
   set value(t) {
     (t = this.__v_isShallow ? t : X(t)),
       cs(t, this._rawValue) &&
-        ((this._rawValue = t),
+      ((this._rawValue = t),
         (this._value = this.__v_isShallow ? t : ds(t)),
         bi(this));
   }
@@ -759,7 +759,7 @@ class Or {
     return (
       yi(t),
       (t._dirty || !t._cacheable) &&
-        ((t._dirty = !1), (t._value = t.effect.run())),
+      ((t._dirty = !1), (t._value = t.effect.run())),
       t._value
     );
   }
@@ -789,10 +789,10 @@ function He(e, t, s, n) {
     const i = yt(e, t, s, n);
     return (
       i &&
-        ni(i) &&
-        i.catch((a) => {
-          Ws(a, t, s);
-        }),
+      ni(i) &&
+      i.catch((a) => {
+        Ws(a, t, s);
+      }),
       i
     );
   }
@@ -806,7 +806,7 @@ function Ws(e, t, s, n = !0) {
     let i = t.parent;
     const a = t.proxy,
       r = s;
-    for (; i; ) {
+    for (; i;) {
       const d = i.ec;
       if (d) {
         for (let u = 0; u < d.length; u++) if (d[u](e, a, r) === !1) return;
@@ -844,7 +844,7 @@ function ms(e) {
 function Tr(e) {
   let t = rt + 1,
     s = je.length;
-  for (; t < s; ) {
+  for (; t < s;) {
     const n = (t + s) >>> 1;
     fs(je[n]) < e ? (t = n + 1) : (s = n);
   }
@@ -1028,7 +1028,7 @@ function un(e) {
   }
   return (
     s.dirs &&
-      ((de = Ct(de)), (de.dirs = de.dirs ? de.dirs.concat(s.dirs) : s.dirs)),
+    ((de = Ct(de)), (de.dirs = de.dirs ? de.dirs.concat(s.dirs) : s.dirs)),
     s.transition && (de.transition = s.transition),
     (S = de),
     Ds(_e),
@@ -1036,11 +1036,11 @@ function un(e) {
   );
 }
 const Fr = (e) => {
-    let t;
-    for (const s in e)
-      (s === "class" || s === "style" || Qs(s)) && ((t || (t = {}))[s] = e[s]);
-    return t;
-  },
+  let t;
+  for (const s in e)
+    (s === "class" || s === "style" || Qs(s)) && ((t || (t = {}))[s] = e[s]);
+  return t;
+},
   Rr = (e, t) => {
     const s = {};
     for (const n in e) (!jn(n) || !(n.slice(9) in t)) && (s[n] = e[n]);
@@ -1065,12 +1065,12 @@ function Mr(e, t, s) {
     return (o || r) && (!r || !r.$stable)
       ? !0
       : n === a
-      ? !1
-      : n
-      ? a
-        ? _o(n, a, d)
-        : !0
-      : !!a;
+        ? !1
+        : n
+          ? a
+            ? _o(n, a, d)
+            : !0
+          : !!a;
   return !1;
 }
 function _o(e, t, s) {
@@ -1083,7 +1083,7 @@ function _o(e, t, s) {
   return !1;
 }
 function Yr({ vnode: e, parent: t }, s) {
-  for (; t && t.subTree === e; ) ((e = t.vnode).el = s), (t = t.parent);
+  for (; t && t.subTree === e;) ((e = t.vnode).el = s), (t = t.parent);
 }
 const Hr = (e) => e.__isSuspense;
 function Qr(e, t) {
@@ -1128,24 +1128,24 @@ function Ni(
     (xe(e)
       ? ((c = () => e.value), (d = wn(e)))
       : zt(e)
-      ? ((c = () => e), (n = !0))
-      : H(e)
-      ? ((u = !0),
-        (d = e.some((M) => zt(M) || wn(M))),
-        (c = () =>
-          e.map((M) => {
-            if (xe(M)) return M.value;
-            if (zt(M)) return Lt(M);
-            if (W(M)) return yt(M, r, 2);
-          })))
-      : W(e)
-      ? t
-        ? (c = () => yt(e, r, 2))
-        : (c = () => {
-            if (!(r && r.isUnmounted)) return m && m(), He(e, r, 3, [g]);
-          })
-      : (c = Ve),
-    t && n)
+        ? ((c = () => e), (n = !0))
+        : H(e)
+          ? ((u = !0),
+            (d = e.some((M) => zt(M) || wn(M))),
+            (c = () =>
+              e.map((M) => {
+                if (xe(M)) return M.value;
+                if (zt(M)) return Lt(M);
+                if (W(M)) return yt(M, r, 2);
+              })))
+          : W(e)
+            ? t
+              ? (c = () => yt(e, r, 2))
+              : (c = () => {
+                if (!(r && r.isUnmounted)) return m && m(), He(e, r, 3, [g]);
+              })
+            : (c = Ve),
+      t && n)
   ) {
     const M = c;
     c = () => Lt(M());
@@ -1172,8 +1172,8 @@ function Ni(
   o === "sync"
     ? (D = k)
     : o === "post"
-    ? (D = () => ke(k, r && r.suspense))
-    : (D = () => Lr(k));
+      ? (D = () => ke(k, r && r.suspense))
+      : (D = () => Lr(k));
   const S = new Yn(c, D);
   return (
     t
@@ -1181,8 +1181,8 @@ function Ni(
         ? k()
         : (O = S.run())
       : o === "post"
-      ? ke(S.run.bind(S), r && r.suspense)
-      : S.run(),
+        ? ke(S.run.bind(S), r && r.suspense)
+        : S.run(),
     () => {
       S.stop(), r && r.scope && Dn(r.scope.effects, S);
     }
@@ -1317,22 +1317,22 @@ function Li(e, t) {
 }
 function us(e, t, s, n) {
   const {
-      appear: o,
-      mode: i,
-      persisted: a = !1,
-      onBeforeEnter: r,
-      onEnter: c,
-      onAfterEnter: d,
-      onEnterCancelled: u,
-      onBeforeLeave: m,
-      onLeave: g,
-      onAfterLeave: O,
-      onLeaveCancelled: k,
-      onBeforeAppear: D,
-      onAppear: S,
-      onAfterAppear: M,
-      onAppearCancelled: _e,
-    } = t,
+    appear: o,
+    mode: i,
+    persisted: a = !1,
+    onBeforeEnter: r,
+    onEnter: c,
+    onAfterEnter: d,
+    onEnterCancelled: u,
+    onBeforeLeave: m,
+    onLeave: g,
+    onAfterLeave: O,
+    onLeaveCancelled: k,
+    onBeforeAppear: D,
+    onAppear: S,
+    onAfterAppear: M,
+    onAppearCancelled: _e,
+  } = t,
     de = String(e.key),
     te = Li(s, e),
     Ae = (Z, ee) => {
@@ -1366,9 +1366,9 @@ function us(e, t, s, n) {
         const se = (Z._enterCb = (Ne) => {
           j ||
             ((j = !0),
-            Ne ? Ae(he, [Z]) : Ae(re, [Z]),
-            Ue.delayedLeave && Ue.delayedLeave(),
-            (Z._enterCb = void 0));
+              Ne ? Ae(he, [Z]) : Ae(re, [Z]),
+              Ue.delayedLeave && Ue.delayedLeave(),
+              (Z._enterCb = void 0));
         });
         ee ? Xe(ee, [Z, se]) : se();
       },
@@ -1380,10 +1380,10 @@ function us(e, t, s, n) {
         const j = (Z._leaveCb = (se) => {
           he ||
             ((he = !0),
-            ee(),
-            se ? Ae(k, [Z]) : Ae(O, [Z]),
-            (Z._leaveCb = void 0),
-            te[re] === e && delete te[re]);
+              ee(),
+              se ? Ae(k, [Z]) : Ae(O, [Z]),
+              (Z._leaveCb = void 0),
+              te[re] === e && delete te[re]);
         });
         (te[re] = e), g ? Xe(g, [Z, j]) : j();
       },
@@ -1403,9 +1403,9 @@ function As(e, t) {
   e.shapeFlag & 6 && e.component
     ? As(e.component.subTree, t)
     : e.shapeFlag & 128
-    ? ((e.ssContent.transition = t.clone(e.ssContent)),
-      (e.ssFallback.transition = t.clone(e.ssFallback)))
-    : (e.transition = t);
+      ? ((e.ssContent.transition = t.clone(e.ssContent)),
+        (e.ssFallback.transition = t.clone(e.ssFallback)))
+      : (e.transition = t);
 }
 function Zn(e, t = !1, s) {
   let n = [],
@@ -1436,7 +1436,7 @@ function ji(e, t, s = ye) {
     e.__wdc ||
     (e.__wdc = () => {
       let o = s;
-      for (; o; ) {
+      for (; o;) {
         if (o.isDeactivated) return;
         o = o.parent;
       }
@@ -1444,7 +1444,7 @@ function ji(e, t, s = ye) {
     });
   if (($s(t, n, s), s)) {
     let o = s.parent;
-    for (; o && o.parent; )
+    for (; o && o.parent;)
       qs(o.parent.vnode) && Wr(n, t, s, o), (o = o.parent);
   }
 }
@@ -1469,7 +1469,7 @@ function $s(e, t, s = ye, n = !1) {
   }
 }
 const ut =
-    (e) =>
+  (e) =>
     (t, s = ye) =>
       (!hs || e === "sp") && $s(e, t, s),
   en = ut("bm"),
@@ -1657,10 +1657,10 @@ const xn = (e) => (e ? ($i(e) ? on(e) || e.proxy : xn(e.parent)) : null),
       return o !== ie && V(o, t)
         ? ((o[t] = s), !0)
         : n !== ie && V(n, t)
-        ? ((n[t] = s), !0)
-        : V(e.props, t) || (t[0] === "$" && t.slice(1) in e)
-        ? !1
-        : ((i[t] = s), !0);
+          ? ((n[t] = s), !0)
+          : V(e.props, t) || (t[0] === "$" && t.slice(1) in e)
+            ? !1
+            : ((i[t] = s), !0);
     },
     has(
       {
@@ -1765,18 +1765,18 @@ function nc(e) {
   }
   if (
     (ge(en, m),
-    ge(vs, g),
-    ge(Vr, O),
-    ge(Di, k),
-    ge(Kr, D),
-    ge(Zr, S),
-    ge($r, Z),
-    ge(qr, Xe),
-    ge(Xr, Ue),
-    ge(Fi, _e),
-    ge(Ri, te),
-    ge(Gr, ee),
-    H(re))
+      ge(vs, g),
+      ge(Vr, O),
+      ge(Di, k),
+      ge(Kr, D),
+      ge(Zr, S),
+      ge($r, Z),
+      ge(qr, Xe),
+      ge(Xr, Ue),
+      ge(Fi, _e),
+      ge(Ri, te),
+      ge(Gr, ee),
+      H(re))
   )
     if (re.length) {
       const fe = e.exposed || (e.exposed = {});
@@ -1804,11 +1804,11 @@ function oc(e, t, s = Ve, n = !1) {
       : (a = Ns(i)),
       xe(a) && n
         ? Object.defineProperty(t, o, {
-            enumerable: !0,
-            configurable: !0,
-            get: () => a.value,
-            set: (r) => (a.value = r),
-          })
+          enumerable: !0,
+          configurable: !0,
+          get: () => a.value,
+          set: (r) => (a.value = r),
+        })
         : (t[o] = a);
   }
 }
@@ -1842,8 +1842,8 @@ function Ui(e) {
     r
       ? (c = r)
       : !o.length && !s && !n
-      ? (c = t)
-      : ((c = {}), o.length && o.forEach((d) => Rs(c, d, a, !0)), Rs(c, t, a)),
+        ? (c = t)
+        : ((c = {}), o.length && o.forEach((d) => Rs(c, d, a, !0)), Rs(c, t, a)),
     i.set(t, c),
     c
   );
@@ -1888,11 +1888,11 @@ function Io(e, t) {
   return t
     ? e
       ? function () {
-          return we(
-            W(e) ? e.call(this, this) : e,
-            W(t) ? t.call(this, this) : t
-          );
-        }
+        return we(
+          W(e) ? e.call(this, this) : e,
+          W(t) ? t.call(this, this) : t
+        );
+      }
       : t
     : e;
 }
@@ -1930,10 +1930,10 @@ function cc(e, t, s, n = !1) {
 }
 function lc(e, t, s, n) {
   const {
-      props: o,
-      attrs: i,
-      vnode: { patchFlag: a },
-    } = e,
+    props: o,
+    attrs: i,
+    vnode: { patchFlag: a },
+  } = e,
     r = X(o),
     [c] = e.propsOptions;
   let d = !1;
@@ -1960,8 +1960,8 @@ function lc(e, t, s, n) {
       (!t || (!V(t, m) && ((u = Wt(m)) === m || !V(t, u)))) &&
         (c
           ? s &&
-            (s[m] !== void 0 || s[u] !== void 0) &&
-            (o[m] = Sn(c, r, m, void 0, e, !0))
+          (s[m] !== void 0 || s[u] !== void 0) &&
+          (o[m] = Sn(c, r, m, void 0, e, !0))
           : delete o[m]);
     if (i !== r)
       for (const m in i) (!t || (!V(t, m) && !0)) && (delete i[m], (d = !0));
@@ -1982,7 +1982,7 @@ function Ji(e, t, s, n) {
           ? (s[u] = d)
           : ((r || (r = {}))[u] = d)
         : Gs(e.emitsOptions, c) ||
-          ((!(c in n) || d !== n[c]) && ((n[c] = d), (a = !0)));
+        ((!(c in n) || d !== n[c]) && ((n[c] = d), (a = !0)));
     }
   if (i) {
     const c = X(s),
@@ -2149,13 +2149,13 @@ function pc(e, t) {
       get config() {
         return i.config;
       },
-      set config(d) {},
+      set config(d) { },
       use(d, ...u) {
         return (
           a.has(d) ||
-            (d && W(d.install)
-              ? (a.add(d), d.install(c, ...u))
-              : W(d) && (a.add(d), d(c, ...u))),
+          (d && W(d.install)
+            ? (a.add(d), d.install(c, ...u))
+            : W(d) && (a.add(d), d(c, ...u))),
           c
         );
       },
@@ -2209,7 +2209,7 @@ function On(e, t, s, n, o = !1) {
       (me(d)
         ? ((u[d] = null), V(m, d) && (m[d] = null))
         : xe(d) && (d.value = null)),
-    W(c))
+      W(c))
   )
     yt(c, r, 12, [a, u]);
   else {
@@ -2222,10 +2222,10 @@ function On(e, t, s, n, o = !1) {
           o
             ? H(D) && Dn(D, i)
             : H(D)
-            ? D.includes(i) || D.push(i)
-            : g
-            ? ((u[c] = [i]), V(m, c) && (m[c] = u[c]))
-            : ((c.value = [i]), e.k && (u[e.k] = c.value));
+              ? D.includes(i) || D.push(i)
+              : g
+                ? ((u[c] = [i]), V(m, c) && (m[c] = u[c]))
+                : ((c.value = [i]), e.k && (u[e.k] = c.value));
         } else
           g
             ? ((u[c] = a), V(m, c) && (m[c] = a))
@@ -2243,20 +2243,20 @@ function gc(e, t) {
   const s = Xa();
   s.__VUE__ = !0;
   const {
-      insert: n,
-      remove: o,
-      patchProp: i,
-      createElement: a,
-      createText: r,
-      createComment: c,
-      setText: d,
-      setElementText: u,
-      parentNode: m,
-      nextSibling: g,
-      setScopeId: O = Ve,
-      cloneNode: k,
-      insertStaticContent: D,
-    } = e,
+    insert: n,
+    remove: o,
+    patchProp: i,
+    createElement: a,
+    createText: r,
+    createComment: c,
+    setText: d,
+    setElementText: u,
+    parentNode: m,
+    nextSibling: g,
+    setScopeId: O = Ve,
+    cloneNode: k,
+    insertStaticContent: D,
+  } = e,
     S = (
       l,
       f,
@@ -2289,8 +2289,8 @@ function gc(e, t) {
           P & 1
             ? Xe(l, f, p, y, _, C, E, w, I)
             : P & 6
-            ? Ne(l, f, p, y, _, C, E, w, I)
-            : (P & 64 || P & 128) && b.process(l, f, p, y, _, C, E, w, I, Bt);
+              ? Ne(l, f, p, y, _, C, E, w, I)
+              : (P & 64 || P & 128) && b.process(l, f, p, y, _, C, E, w, I, Bt);
       }
       F != null && _ && On(F, l && l.ref, C, f || l, !f);
     },
@@ -2309,12 +2309,12 @@ function gc(e, t) {
     },
     te = ({ el: l, anchor: f }, p, y) => {
       let _;
-      for (; l && l !== f; ) (_ = g(l)), n(l, p, y), (l = _);
+      for (; l && l !== f;) (_ = g(l)), n(l, p, y), (l = _);
       n(f, p, y);
     },
     Ae = ({ el: l, anchor: f }) => {
       let p;
-      for (; l && l !== f; ) (p = g(l)), o(l), (l = p);
+      for (; l && l !== f;) (p = g(l)), o(l), (l = p);
       o(f);
     },
     Xe = (l, f, p, y, _, C, E, w, I) => {
@@ -2335,12 +2335,12 @@ function gc(e, t) {
       else {
         if (
           ((I = l.el = a(l.type, C, P && P.is, P)),
-          R & 8
-            ? u(I, l.children)
-            : R & 16 &&
+            R & 8
+              ? u(I, l.children)
+              : R & 16 &&
               ee(l.children, I, null, y, _, C && F !== "foreignObject", E, w),
-          ne && St(l, null, y, "created"),
-          P)
+            ne && St(l, null, y, "created"),
+            P)
         ) {
           for (const le in P)
             le !== "value" &&
@@ -2356,9 +2356,9 @@ function gc(e, t) {
       oe && U.beforeEnter(I),
         n(I, f, p),
         ((b = P && P.onVnodeMounted) || oe || ne) &&
-          ke(() => {
-            b && $e(b, y, l), oe && U.enter(I), ne && St(l, null, y, "mounted");
-          }, _);
+        ke(() => {
+          b && $e(b, y, l), oe && U.enter(I), ne && St(l, null, y, "mounted");
+        }, _);
     },
     Z = (l, f, p, y, _) => {
       if ((p && O(l, p), y)) for (let C = 0; C < y.length; C++) O(l, y[C]);
@@ -2392,13 +2392,13 @@ function gc(e, t) {
         (b
           ? he(l.dynamicChildren, b, w, p, y, G, C)
           : E || Pe(l, f, w, null, p, y, G, C, !1),
-        I > 0)
+          I > 0)
       ) {
         if (I & 16) j(w, f, P, R, p, y, _);
         else if (
           (I & 2 && P.class !== R.class && i(w, "class", null, R.class, _),
-          I & 4 && i(w, "style", P.style, R.style, _),
-          I & 8)
+            I & 4 && i(w, "style", P.style, R.style, _),
+            I & 8)
         ) {
           const ne = f.dynamicProps;
           for (let oe = 0; oe < ne.length; oe++) {
@@ -2449,9 +2449,9 @@ function gc(e, t) {
         l == null
           ? (n(b, p, y), n(F, p, y), ee(f.children, p, F, _, C, E, w, I))
           : P > 0 && P & 64 && R && l.dynamicChildren
-          ? (he(l.dynamicChildren, R, p, _, C, E, w),
-            (f.key != null || (_ && f === _.subTree)) && Gi(l, f, !0))
-          : Pe(l, f, p, F, _, C, E, w, I);
+            ? (he(l.dynamicChildren, R, p, _, C, E, w),
+              (f.key != null || (_ && f === _.subTree)) && Gi(l, f, !0))
+            : Pe(l, f, p, F, _, C, E, w, I);
     },
     Ne = (l, f, p, y, _, C, E, w, I) => {
       (f.slotScopeIds = w),
@@ -2483,58 +2483,58 @@ function gc(e, t) {
     },
     fe = (l, f, p, y, _, C, E) => {
       const w = () => {
-          if (l.isMounted) {
-            let { next: F, bu: P, u: R, parent: U, vnode: G } = l,
-              ne = F,
-              oe;
-            Ot(l, !1),
-              F ? ((F.el = G.el), $(l, F, E)) : (F = G),
-              P && fn(P),
-              (oe = F.props && F.props.onVnodeBeforeUpdate) && $e(oe, U, F, G),
-              Ot(l, !0);
-            const le = un(l),
-              Je = l.subTree;
-            (l.subTree = le),
-              S(Je, le, m(Je.el), Ce(Je), l, _, C),
-              (F.el = le.el),
-              ne === null && Yr(l, le.el),
-              R && ke(R, _),
-              (oe = F.props && F.props.onVnodeUpdated) &&
-                ke(() => $e(oe, U, F, G), _);
-          } else {
-            let F;
-            const { el: P, props: R } = f,
-              { bm: U, m: G, parent: ne } = l,
-              oe = as(f);
-            if (
-              (Ot(l, !1),
+        if (l.isMounted) {
+          let { next: F, bu: P, u: R, parent: U, vnode: G } = l,
+            ne = F,
+            oe;
+          Ot(l, !1),
+            F ? ((F.el = G.el), $(l, F, E)) : (F = G),
+            P && fn(P),
+            (oe = F.props && F.props.onVnodeBeforeUpdate) && $e(oe, U, F, G),
+            Ot(l, !0);
+          const le = un(l),
+            Je = l.subTree;
+          (l.subTree = le),
+            S(Je, le, m(Je.el), Ce(Je), l, _, C),
+            (F.el = le.el),
+            ne === null && Yr(l, le.el),
+            R && ke(R, _),
+            (oe = F.props && F.props.onVnodeUpdated) &&
+            ke(() => $e(oe, U, F, G), _);
+        } else {
+          let F;
+          const { el: P, props: R } = f,
+            { bm: U, m: G, parent: ne } = l,
+            oe = as(f);
+          if (
+            (Ot(l, !1),
               U && fn(U),
               !oe && (F = R && R.onVnodeBeforeMount) && $e(F, ne, f),
               Ot(l, !0),
               P && dn)
-            ) {
-              const le = () => {
-                (l.subTree = un(l)), dn(P, l.subTree, l, _, null);
-              };
-              oe
-                ? f.type.__asyncLoader().then(() => !l.isUnmounted && le())
-                : le();
-            } else {
-              const le = (l.subTree = un(l));
-              S(null, le, p, y, l, _, C), (f.el = le.el);
-            }
-            if ((G && ke(G, _), !oe && (F = R && R.onVnodeMounted))) {
-              const le = f;
-              ke(() => $e(F, ne, le), _);
-            }
-            (f.shapeFlag & 256 ||
-              (ne && as(ne.vnode) && ne.vnode.shapeFlag & 256)) &&
-              l.a &&
-              ke(l.a, _),
-              (l.isMounted = !0),
-              (f = p = y = null);
+          ) {
+            const le = () => {
+              (l.subTree = un(l)), dn(P, l.subTree, l, _, null);
+            };
+            oe
+              ? f.type.__asyncLoader().then(() => !l.isUnmounted && le())
+              : le();
+          } else {
+            const le = (l.subTree = un(l));
+            S(null, le, p, y, l, _, C), (f.el = le.el);
           }
-        },
+          if ((G && ke(G, _), !oe && (F = R && R.onVnodeMounted))) {
+            const le = f;
+            ke(() => $e(F, ne, le), _);
+          }
+          (f.shapeFlag & 256 ||
+            (ne && as(ne.vnode) && ne.vnode.shapeFlag & 256)) &&
+            l.a &&
+            ke(l.a, _),
+            (l.isMounted = !0),
+            (f = p = y = null);
+        }
+      },
         I = (l.effect = new Yn(w, () => Ii(b), l.scope)),
         b = (l.update = () => I.run());
       (b.id = l.uid), Ot(l, !0), b();
@@ -2567,10 +2567,10 @@ function gc(e, t) {
       U & 8
         ? (F & 16 && J(b, _, C), P !== b && u(p, P))
         : F & 16
-        ? U & 16
-          ? xt(b, P, p, y, _, C, E, w, I)
-          : J(b, _, C, !0)
-        : (F & 8 && u(p, ""), U & 16 && ee(P, p, y, _, C, E, w, I));
+          ? U & 16
+            ? xt(b, P, p, y, _, C, E, w, I)
+            : J(b, _, C, !0)
+          : (F & 8 && u(p, ""), U & 16 && ee(P, p, y, _, C, E, w, I));
     },
     $t = (l, f, p, y, _, C, E, w, I) => {
       (l = l || Ut), (f = f || Ut);
@@ -2589,14 +2589,14 @@ function gc(e, t) {
       const F = f.length;
       let P = l.length - 1,
         R = F - 1;
-      for (; b <= P && b <= R; ) {
+      for (; b <= P && b <= R;) {
         const U = l[b],
           G = (f[b] = I ? vt(f[b]) : tt(f[b]));
         if (Tt(U, G)) S(U, G, p, null, _, C, E, w, I);
         else break;
         b++;
       }
-      for (; b <= P && b <= R; ) {
+      for (; b <= P && b <= R;) {
         const U = l[P],
           G = (f[R] = I ? vt(f[R]) : tt(f[R]));
         if (Tt(U, G)) S(U, G, p, null, _, C, E, w, I);
@@ -2607,10 +2607,10 @@ function gc(e, t) {
         if (b <= R) {
           const U = R + 1,
             G = U < F ? f[U].el : y;
-          for (; b <= R; )
+          for (; b <= R;)
             S(null, (f[b] = I ? vt(f[b]) : tt(f[b])), p, G, _, C, E, w, I), b++;
         }
-      } else if (b > R) for (; b <= P; ) N(l[b], _, C, !0), b++;
+      } else if (b > R) for (; b <= P;) N(l[b], _, C, !0), b++;
       else {
         const U = b,
           G = b,
@@ -2725,8 +2725,8 @@ function gc(e, t) {
           F & 64
             ? l.type.remove(l, f, p, _, Bt, y)
             : b && (C !== ue || (P > 0 && P & 64))
-            ? J(b, f, p, !1, !0)
-            : ((C === ue && P & 384) || (!_ && F & 16)) && J(I, f, p),
+              ? J(b, f, p, !1, !0)
+              : ((C === ue && P & 384) || (!_ && F & 16)) && J(I, f, p),
           y && L(l);
       }
       ((G && (ne = E && E.onVnodeUnmounted)) || U) &&
@@ -2755,7 +2755,7 @@ function gc(e, t) {
     },
     Q = (l, f) => {
       let p;
-      for (; l !== f; ) (p = g(l)), o(l), (l = p);
+      for (; l !== f;) (p = g(l)), o(l), (l = p);
       o(f);
     },
     z = (l, f, p) => {
@@ -2768,12 +2768,12 @@ function gc(e, t) {
           l.isUnmounted = !0;
         }, f),
         f &&
-          f.pendingBranch &&
-          !f.isUnmounted &&
-          l.asyncDep &&
-          !l.asyncResolved &&
-          l.suspenseId === f.pendingId &&
-          (f.deps--, f.deps === 0 && f.resolve());
+        f.pendingBranch &&
+        !f.isUnmounted &&
+        l.asyncDep &&
+        !l.asyncResolved &&
+        l.suspenseId === f.pendingId &&
+        (f.deps--, f.deps === 0 && f.resolve());
     },
     J = (l, f, p, y = !1, _ = !1, C = 0) => {
       for (let E = C; E < l.length; E++) N(l[E], f, p, y, _);
@@ -2782,8 +2782,8 @@ function gc(e, t) {
       l.shapeFlag & 6
         ? Ce(l.component.subTree)
         : l.shapeFlag & 128
-        ? l.suspense.next()
-        : g(l.anchor || l.el),
+          ? l.suspense.next()
+          : g(l.anchor || l.el),
     Et = (l, f, p) => {
       l == null
         ? f._vnode && N(f._vnode, null, null, !0)
@@ -2822,7 +2822,7 @@ function Gi(e, t, s = !1) {
         !r.dynamicChildren &&
         ((r.patchFlag <= 0 || r.patchFlag === 32) &&
           ((r = o[i] = vt(o[i])), (r.el = a.el)),
-        s || Gi(a, r));
+          s || Gi(a, r));
     }
 }
 function mc(e) {
@@ -2837,12 +2837,12 @@ function mc(e) {
         (t[n] = o), s.push(n);
         continue;
       }
-      for (i = 0, a = s.length - 1; i < a; )
+      for (i = 0, a = s.length - 1; i < a;)
         (r = (i + a) >> 1), e[s[r]] < d ? (i = r + 1) : (a = r);
       d < e[s[i]] && (i > 0 && (t[n] = s[i - 1]), (s[i] = n));
     }
   }
-  for (i = s.length, a = s[i - 1]; i-- > 0; ) (s[i] = a), (a = t[a]);
+  for (i = s.length, a = s[i - 1]; i-- > 0;) (s[i] = a), (a = t[a]);
   return s;
 }
 const vc = (e) => e.__isTeleport,
@@ -2932,11 +2932,11 @@ function A(
       ? ($n(c, s), i & 128 && e.normalize(c))
       : s && (c.shapeFlag |= me(s) ? 8 : 16),
     ps > 0 &&
-      !a &&
-      Ze &&
-      (c.patchFlag > 0 || i & 6) &&
-      c.patchFlag !== 32 &&
-      Ze.push(c),
+    !a &&
+    Ze &&
+    (c.patchFlag > 0 || i & 6) &&
+    c.patchFlag !== 32 &&
+    Ze.push(c),
     c
   );
 }
@@ -2947,9 +2947,9 @@ function yc(e, t = null, s = null, n = 0, o = null, i = !1) {
     return (
       s && $n(r, s),
       ps > 0 &&
-        !i &&
-        Ze &&
-        (r.shapeFlag & 6 ? (Ze[Ze.indexOf(e)] = r) : Ze.push(r)),
+      !i &&
+      Ze &&
+      (r.shapeFlag & 6 ? (Ze[Ze.indexOf(e)] = r) : Ze.push(r)),
       (r.patchFlag |= -2),
       r
     );
@@ -3012,10 +3012,10 @@ function tt(e) {
   return e == null || typeof e == "boolean"
     ? B(Qe)
     : H(e)
-    ? B(ue, null, e.slice())
-    : typeof e == "object"
-    ? vt(e)
-    : B(qn, null, String(e));
+      ? B(ue, null, e.slice())
+      : typeof e == "object"
+        ? vt(e)
+        : B(qn, null, String(e));
 }
 function vt(e) {
   return e.el === null || e.memo ? e : Ct(e);
@@ -3036,8 +3036,8 @@ function $n(e, t) {
       !o && !(sn in t)
         ? (t._ctx = Ee)
         : o === 3 &&
-          Ee &&
-          (Ee.slots._ === 1 ? (t._ = 1) : ((t._ = 2), (e.patchFlag |= 1024)));
+        Ee &&
+        (Ee.slots._ === 1 ? (t._ = 1) : ((t._ = 2), (e.patchFlag |= 1024)));
     }
   else
     W(t)
@@ -3253,8 +3253,8 @@ function kc(e, t, s) {
         : B(e, t)
       : B(e, null, t)
     : (n > 3
-        ? (s = Array.prototype.slice.call(arguments, 2))
-        : n === 3 && Ms(s) && (s = [s]),
+      ? (s = Array.prototype.slice.call(arguments, 2))
+      : n === 3 && Ms(s) && (s = [s]),
       B(e, t, s));
 }
 const Tc = "3.2.37",
@@ -3275,9 +3275,9 @@ const Tc = "3.2.37",
         : Pt.createElement(e, s ? { is: s } : void 0);
       return (
         e === "select" &&
-          n &&
-          n.multiple != null &&
-          o.setAttribute("multiple", n.multiple),
+        n &&
+        n.multiple != null &&
+        o.setAttribute("multiple", n.multiple),
         o
       );
     },
@@ -3305,7 +3305,7 @@ const Tc = "3.2.37",
         for (
           ;
           t.insertBefore(o.cloneNode(!0), s),
-            !(o === i || !(o = o.nextSibling));
+          !(o === i || !(o = o.nextSibling));
 
         );
       else {
@@ -3313,7 +3313,7 @@ const Tc = "3.2.37",
         const r = To.content;
         if (n) {
           const c = r.firstChild;
-          for (; c.firstChild; ) r.appendChild(c.firstChild);
+          for (; c.firstChild;) r.appendChild(c.firstChild);
           r.removeChild(c);
         }
         t.insertBefore(r, s);
@@ -3330,8 +3330,8 @@ function jc(e, t, s) {
     t == null
       ? e.removeAttribute("class")
       : s
-      ? e.setAttribute("class", t)
-      : (e.className = t);
+        ? e.setAttribute("class", t)
+        : (e.className = t);
 }
 function Dc(e, t, s) {
   const n = e.style,
@@ -3401,12 +3401,12 @@ function Mc(e, t, s, n, o, i, a) {
     c === "boolean"
       ? (s = ei(s))
       : s == null && c === "string"
-      ? ((s = ""), (r = !0))
-      : c === "number" && ((s = 0), (r = !0));
+        ? ((s = ""), (r = !0))
+        : c === "number" && ((s = 0), (r = !0));
   }
   try {
     e[t] = s;
-  } catch {}
+  } catch { }
   r && e.removeAttribute(t);
 }
 const [sa, Yc] = (() => {
@@ -3450,7 +3450,7 @@ function Zc(e) {
   if (Do.test(e)) {
     t = {};
     let s;
-    for (; (s = e.match(Do)); )
+    for (; (s = e.match(Do));)
       (e = e.slice(0, e.length - s[0].length)), (t[s[0].toLowerCase()] = !0);
   }
   return [Wt(e.slice(2)), t];
@@ -3478,29 +3478,29 @@ const Fo = /^on[a-z]/,
     t === "class"
       ? jc(e, n, o)
       : t === "style"
-      ? Dc(e, s, n)
-      : Qs(t)
-      ? jn(t) || Kc(e, t, s, n, a)
-      : (
-          t[0] === "."
-            ? ((t = t.slice(1)), !0)
-            : t[0] === "^"
-            ? ((t = t.slice(1)), !1)
-            : Xc(e, t, n, o)
-        )
-      ? Mc(e, t, n, i, a, r, c)
-      : (t === "true-value"
-          ? (e._trueValue = n)
-          : t === "false-value" && (e._falseValue = n),
-        Rc(e, t, n, o));
+        ? Dc(e, s, n)
+        : Qs(t)
+          ? jn(t) || Kc(e, t, s, n, a)
+          : (
+            t[0] === "."
+              ? ((t = t.slice(1)), !0)
+              : t[0] === "^"
+                ? ((t = t.slice(1)), !1)
+                : Xc(e, t, n, o)
+          )
+            ? Mc(e, t, n, i, a, r, c)
+            : (t === "true-value"
+              ? (e._trueValue = n)
+              : t === "false-value" && (e._falseValue = n),
+              Rc(e, t, n, o));
   };
 function Xc(e, t, s, n) {
   return n
     ? !!(
-        t === "innerHTML" ||
-        t === "textContent" ||
-        (t in e && Fo.test(t) && W(s))
-      )
+      t === "innerHTML" ||
+      t === "textContent" ||
+      (t in e && Fo.test(t) && W(s))
+    )
     : t === "spellcheck" ||
       t === "draggable" ||
       t === "translate" ||
@@ -3508,28 +3508,28 @@ function Xc(e, t, s, n) {
       (t === "list" && e.tagName === "INPUT") ||
       (t === "type" && e.tagName === "TEXTAREA") ||
       (Fo.test(t) && me(s))
-    ? !1
-    : t in e;
+      ? !1
+      : t in e;
 }
 const ht = "transition",
   ts = "animation",
   an = (e, { slots: t }) => kc(Pi, oa(e), t);
 an.displayName = "Transition";
 const na = {
-    name: String,
-    type: String,
-    css: { type: Boolean, default: !0 },
-    duration: [String, Number, Object],
-    enterFromClass: String,
-    enterActiveClass: String,
-    enterToClass: String,
-    appearFromClass: String,
-    appearActiveClass: String,
-    appearToClass: String,
-    leaveFromClass: String,
-    leaveActiveClass: String,
-    leaveToClass: String,
-  },
+  name: String,
+  type: String,
+  css: { type: Boolean, default: !0 },
+  duration: [String, Number, Object],
+  enterFromClass: String,
+  enterActiveClass: String,
+  enterToClass: String,
+  appearFromClass: String,
+  appearActiveClass: String,
+  appearToClass: String,
+  leaveFromClass: String,
+  leaveActiveClass: String,
+  leaveToClass: String,
+},
   qc = (an.props = we({}, Pi.props, na)),
   Nt = (e, t = []) => {
     H(e) ? e.forEach((s) => s(...t)) : e && e(...t);
@@ -3540,19 +3540,19 @@ function oa(e) {
   for (const j in e) j in na || (t[j] = e[j]);
   if (e.css === !1) return t;
   const {
-      name: s = "v",
-      type: n,
-      duration: o,
-      enterFromClass: i = `${s}-enter-from`,
-      enterActiveClass: a = `${s}-enter-active`,
-      enterToClass: r = `${s}-enter-to`,
-      appearFromClass: c = i,
-      appearActiveClass: d = a,
-      appearToClass: u = r,
-      leaveFromClass: m = `${s}-leave-from`,
-      leaveActiveClass: g = `${s}-leave-active`,
-      leaveToClass: O = `${s}-leave-to`,
-    } = e,
+    name: s = "v",
+    type: n,
+    duration: o,
+    enterFromClass: i = `${s}-enter-from`,
+    enterActiveClass: a = `${s}-enter-active`,
+    enterToClass: r = `${s}-enter-to`,
+    appearFromClass: c = i,
+    appearActiveClass: d = a,
+    appearToClass: u = r,
+    leaveFromClass: m = `${s}-leave-from`,
+    leaveActiveClass: g = `${s}-leave-active`,
+    leaveToClass: O = `${s}-leave-to`,
+  } = e,
     k = $c(o),
     D = k && k[0],
     S = k && k[1],
@@ -3648,8 +3648,8 @@ function Yo(e, t, s, n) {
   const d = a + "end";
   let u = 0;
   const m = () => {
-      e.removeEventListener(d, g), i();
-    },
+    e.removeEventListener(d, g), i();
+  },
     g = (O) => {
       O.target === e && ++u >= c && m();
     };
@@ -3673,15 +3673,15 @@ function ia(e, t) {
   t === ht
     ? a > 0 && ((u = ht), (m = a), (g = i.length))
     : t === ts
-    ? d > 0 && ((u = ts), (m = d), (g = c.length))
-    : ((m = Math.max(a, d)),
-      (u = m > 0 ? (a > d ? ht : ts) : null),
-      (g = u ? (u === ht ? i.length : c.length) : 0));
+      ? d > 0 && ((u = ts), (m = d), (g = c.length))
+      : ((m = Math.max(a, d)),
+        (u = m > 0 ? (a > d ? ht : ts) : null),
+        (g = u ? (u === ht ? i.length : c.length) : 0));
   const O = u === ht && /\b(transform|all)(,|$)/.test(s[ht + "Property"]);
   return { type: u, timeout: m, propCount: g, hasTransform: O };
 }
 function Ho(e, t) {
-  for (; e.length < t.length; ) e = e.concat(e);
+  for (; e.length < t.length;) e = e.concat(e);
   return Math.max(...t.map((s, n) => Qo(s) + Qo(e[n])));
 }
 function Qo(e) {
@@ -3716,8 +3716,8 @@ const ra = new WeakMap(),
                 (g && g.target !== d) ||
                   ((!g || /transform$/.test(g.propertyName)) &&
                     (d.removeEventListener("transitionend", m),
-                    (d._moveCb = null),
-                    mt(d, a)));
+                      (d._moveCb = null),
+                      mt(d, a)));
               });
               d.addEventListener("transitionend", m);
             });
@@ -3792,13 +3792,13 @@ const rl = ["ctrl", "shift", "alt", "meta"],
   },
   ll =
     (e, t) =>
-    (s, ...n) => {
-      for (let o = 0; o < t.length; o++) {
-        const i = cl[t[o]];
-        if (i && i(s, t)) return;
-      }
-      return e(s, ...n);
-    },
+      (s, ...n) => {
+        for (let o = 0; o < t.length; o++) {
+          const i = cl[t[o]];
+          if (i && i(s, t)) return;
+        }
+        return e(s, ...n);
+      },
   dl = we({ patchProp: Gc }, Lc);
 let Uo;
 function fl() {
@@ -3817,7 +3817,7 @@ const la = (...e) => {
       const a = s(o, !1, o instanceof SVGElement);
       return (
         o instanceof Element &&
-          (o.removeAttribute("v-cloak"), o.setAttribute("data-v-app", "")),
+        (o.removeAttribute("v-cloak"), o.setAttribute("data-v-app", "")),
         a
       );
     }),
@@ -3844,10 +3844,10 @@ const Al = "/img/logo.webp",
     },
   });
 const ce = (e, t) => {
-    const s = e.__vccOpts || e;
-    for (const [n, o] of t) s[n] = o;
-    return s;
-  },
+  const s = e.__vccOpts || e;
+  for (const [n, o] of t) s[n] = o;
+  return s;
+},
   da = ce(pl, [["__scopeId", "data-v-d1689510"]]),
   to = (e) => (Be("data-v-9aa37936"), (e = e()), Se(), e),
   hl = to(() => A("span", null, null, -1)),
@@ -3869,12 +3869,12 @@ var bl =
   typeof globalThis < "u"
     ? globalThis
     : typeof window < "u"
-    ? window
-    : typeof global < "u"
-    ? global
-    : typeof self < "u"
-    ? self
-    : {};
+      ? window
+      : typeof global < "u"
+        ? global
+        : typeof self < "u"
+          ? self
+          : {};
 function wl(e) {
   return e && e.__esModule && Object.prototype.hasOwnProperty.call(e, "default")
     ? e.default
@@ -3892,555 +3892,555 @@ var fa = { exports: {} };
   })(bl, function () {
     return (function () {
       var s = {
-          686: function (i, a, r) {
-            r.d(a, {
-              default: function () {
-                return xt;
-              },
-            });
-            var c = r(279),
-              d = r.n(c),
-              u = r(370),
-              m = r.n(u),
-              g = r(817),
-              O = r.n(g);
-            function k(Y) {
-              try {
-                return document.execCommand(Y);
-              } catch {
-                return !1;
-              }
+        686: function (i, a, r) {
+          r.d(a, {
+            default: function () {
+              return xt;
+            },
+          });
+          var c = r(279),
+            d = r.n(c),
+            u = r(370),
+            m = r.n(u),
+            g = r(817),
+            O = r.n(g);
+          function k(Y) {
+            try {
+              return document.execCommand(Y);
+            } catch {
+              return !1;
             }
-            var D = function (N) {
-                var L = O()(N);
-                return k("cut"), L;
-              },
-              S = D;
-            function M(Y) {
-              var N = document.documentElement.getAttribute("dir") === "rtl",
-                L = document.createElement("textarea");
-              (L.style.fontSize = "12pt"),
-                (L.style.border = "0"),
-                (L.style.padding = "0"),
-                (L.style.margin = "0"),
-                (L.style.position = "absolute"),
-                (L.style[N ? "right" : "left"] = "-9999px");
-              var Q = window.pageYOffset || document.documentElement.scrollTop;
+          }
+          var D = function (N) {
+            var L = O()(N);
+            return k("cut"), L;
+          },
+            S = D;
+          function M(Y) {
+            var N = document.documentElement.getAttribute("dir") === "rtl",
+              L = document.createElement("textarea");
+            (L.style.fontSize = "12pt"),
+              (L.style.border = "0"),
+              (L.style.padding = "0"),
+              (L.style.margin = "0"),
+              (L.style.position = "absolute"),
+              (L.style[N ? "right" : "left"] = "-9999px");
+            var Q = window.pageYOffset || document.documentElement.scrollTop;
+            return (
+              (L.style.top = "".concat(Q, "px")),
+              L.setAttribute("readonly", ""),
+              (L.value = Y),
+              L
+            );
+          }
+          var _e = function (N, L) {
+            var Q = M(N);
+            L.container.appendChild(Q);
+            var z = O()(Q);
+            return k("copy"), Q.remove(), z;
+          },
+            de = function (N) {
+              var L =
+                arguments.length > 1 && arguments[1] !== void 0
+                  ? arguments[1]
+                  : { container: document.body },
+                Q = "";
               return (
-                (L.style.top = "".concat(Q, "px")),
-                L.setAttribute("readonly", ""),
-                (L.value = Y),
-                L
-              );
-            }
-            var _e = function (N, L) {
-                var Q = M(N);
-                L.container.appendChild(Q);
-                var z = O()(Q);
-                return k("copy"), Q.remove(), z;
-              },
-              de = function (N) {
-                var L =
-                    arguments.length > 1 && arguments[1] !== void 0
-                      ? arguments[1]
-                      : { container: document.body },
-                  Q = "";
-                return (
-                  typeof N == "string"
-                    ? (Q = _e(N, L))
-                    : N instanceof HTMLInputElement &&
-                      !["text", "search", "url", "tel", "password"].includes(
-                        N == null ? void 0 : N.type
-                      )
+                typeof N == "string"
+                  ? (Q = _e(N, L))
+                  : N instanceof HTMLInputElement &&
+                    !["text", "search", "url", "tel", "password"].includes(
+                      N == null ? void 0 : N.type
+                    )
                     ? (Q = _e(N.value, L))
                     : ((Q = O()(N)), k("copy")),
-                  Q
-                );
-              },
-              te = de;
-            function Ae(Y) {
-              return (
-                typeof Symbol == "function" &&
-                typeof Symbol.iterator == "symbol"
-                  ? (Ae = function (L) {
-                      return typeof L;
-                    })
-                  : (Ae = function (L) {
-                      return L &&
-                        typeof Symbol == "function" &&
-                        L.constructor === Symbol &&
-                        L !== Symbol.prototype
-                        ? "symbol"
-                        : typeof L;
-                    }),
-                Ae(Y)
+                Q
               );
-            }
-            var Xe = function () {
-                var N =
-                    arguments.length > 0 && arguments[0] !== void 0
-                      ? arguments[0]
-                      : {},
-                  L = N.action,
-                  Q = L === void 0 ? "copy" : L,
-                  z = N.container,
-                  J = N.target,
-                  Ce = N.text;
-                if (Q !== "copy" && Q !== "cut")
+            },
+            te = de;
+          function Ae(Y) {
+            return (
+              typeof Symbol == "function" &&
+                typeof Symbol.iterator == "symbol"
+                ? (Ae = function (L) {
+                  return typeof L;
+                })
+                : (Ae = function (L) {
+                  return L &&
+                    typeof Symbol == "function" &&
+                    L.constructor === Symbol &&
+                    L !== Symbol.prototype
+                    ? "symbol"
+                    : typeof L;
+                }),
+              Ae(Y)
+            );
+          }
+          var Xe = function () {
+            var N =
+              arguments.length > 0 && arguments[0] !== void 0
+                ? arguments[0]
+                : {},
+              L = N.action,
+              Q = L === void 0 ? "copy" : L,
+              z = N.container,
+              J = N.target,
+              Ce = N.text;
+            if (Q !== "copy" && Q !== "cut")
+              throw new Error(
+                'Invalid "action" value, use either "copy" or "cut"'
+              );
+            if (J !== void 0)
+              if (J && Ae(J) === "object" && J.nodeType === 1) {
+                if (Q === "copy" && J.hasAttribute("disabled"))
                   throw new Error(
-                    'Invalid "action" value, use either "copy" or "cut"'
+                    'Invalid "target" attribute. Please use "readonly" instead of "disabled" attribute'
                   );
-                if (J !== void 0)
-                  if (J && Ae(J) === "object" && J.nodeType === 1) {
-                    if (Q === "copy" && J.hasAttribute("disabled"))
-                      throw new Error(
-                        'Invalid "target" attribute. Please use "readonly" instead of "disabled" attribute'
-                      );
-                    if (
-                      Q === "cut" &&
-                      (J.hasAttribute("readonly") || J.hasAttribute("disabled"))
-                    )
-                      throw new Error(
-                        `Invalid "target" attribute. You can't cut text from elements with "readonly" or "disabled" attributes`
-                      );
-                  } else
-                    throw new Error(
-                      'Invalid "target" value, use a valid Element'
-                    );
-                if (Ce) return te(Ce, { container: z });
-                if (J) return Q === "cut" ? S(J) : te(J, { container: z });
-              },
-              Ue = Xe;
-            function Z(Y) {
-              return (
-                typeof Symbol == "function" &&
+                if (
+                  Q === "cut" &&
+                  (J.hasAttribute("readonly") || J.hasAttribute("disabled"))
+                )
+                  throw new Error(
+                    `Invalid "target" attribute. You can't cut text from elements with "readonly" or "disabled" attributes`
+                  );
+              } else
+                throw new Error(
+                  'Invalid "target" value, use a valid Element'
+                );
+            if (Ce) return te(Ce, { container: z });
+            if (J) return Q === "cut" ? S(J) : te(J, { container: z });
+          },
+            Ue = Xe;
+          function Z(Y) {
+            return (
+              typeof Symbol == "function" &&
                 typeof Symbol.iterator == "symbol"
-                  ? (Z = function (L) {
-                      return typeof L;
-                    })
-                  : (Z = function (L) {
-                      return L &&
-                        typeof Symbol == "function" &&
-                        L.constructor === Symbol &&
-                        L !== Symbol.prototype
-                        ? "symbol"
-                        : typeof L;
-                    }),
-                Z(Y)
+                ? (Z = function (L) {
+                  return typeof L;
+                })
+                : (Z = function (L) {
+                  return L &&
+                    typeof Symbol == "function" &&
+                    L.constructor === Symbol &&
+                    L !== Symbol.prototype
+                    ? "symbol"
+                    : typeof L;
+                }),
+              Z(Y)
+            );
+          }
+          function ee(Y, N) {
+            if (!(Y instanceof N))
+              throw new TypeError("Cannot call a class as a function");
+          }
+          function re(Y, N) {
+            for (var L = 0; L < N.length; L++) {
+              var Q = N[L];
+              (Q.enumerable = Q.enumerable || !1),
+                (Q.configurable = !0),
+                "value" in Q && (Q.writable = !0),
+                Object.defineProperty(Y, Q.key, Q);
+            }
+          }
+          function he(Y, N, L) {
+            return N && re(Y.prototype, N), L && re(Y, L), Y;
+          }
+          function j(Y, N) {
+            if (typeof N != "function" && N !== null)
+              throw new TypeError(
+                "Super expression must either be null or a function"
+              );
+            (Y.prototype = Object.create(N && N.prototype, {
+              constructor: { value: Y, writable: !0, configurable: !0 },
+            })),
+              N && se(Y, N);
+          }
+          function se(Y, N) {
+            return (
+              (se =
+                Object.setPrototypeOf ||
+                function (Q, z) {
+                  return (Q.__proto__ = z), Q;
+                }),
+              se(Y, N)
+            );
+          }
+          function Ne(Y) {
+            var N = fe();
+            return function () {
+              var Q = $(Y),
+                z;
+              if (N) {
+                var J = $(this).constructor;
+                z = Reflect.construct(Q, arguments, J);
+              } else z = Q.apply(this, arguments);
+              return At(this, z);
+            };
+          }
+          function At(Y, N) {
+            return N && (Z(N) === "object" || typeof N == "function")
+              ? N
+              : ge(Y);
+          }
+          function ge(Y) {
+            if (Y === void 0)
+              throw new ReferenceError(
+                "this hasn't been initialised - super() hasn't been called"
+              );
+            return Y;
+          }
+          function fe() {
+            if (
+              typeof Reflect > "u" ||
+              !Reflect.construct ||
+              Reflect.construct.sham
+            )
+              return !1;
+            if (typeof Proxy == "function") return !0;
+            try {
+              return (
+                Date.prototype.toString.call(
+                  Reflect.construct(Date, [], function () { })
+                ),
+                !0
+              );
+            } catch {
+              return !1;
+            }
+          }
+          function $(Y) {
+            return (
+              ($ = Object.setPrototypeOf
+                ? Object.getPrototypeOf
+                : function (L) {
+                  return L.__proto__ || Object.getPrototypeOf(L);
+                }),
+              $(Y)
+            );
+          }
+          function Pe(Y, N) {
+            var L = "data-clipboard-".concat(Y);
+            if (!!N.hasAttribute(L)) return N.getAttribute(L);
+          }
+          var $t = (function (Y) {
+            j(L, Y);
+            var N = Ne(L);
+            function L(Q, z) {
+              var J;
+              return (
+                ee(this, L),
+                (J = N.call(this)),
+                J.resolveOptions(z),
+                J.listenClick(Q),
+                J
               );
             }
-            function ee(Y, N) {
-              if (!(Y instanceof N))
-                throw new TypeError("Cannot call a class as a function");
-            }
-            function re(Y, N) {
-              for (var L = 0; L < N.length; L++) {
-                var Q = N[L];
-                (Q.enumerable = Q.enumerable || !1),
-                  (Q.configurable = !0),
-                  "value" in Q && (Q.writable = !0),
-                  Object.defineProperty(Y, Q.key, Q);
-              }
-            }
-            function he(Y, N, L) {
-              return N && re(Y.prototype, N), L && re(Y, L), Y;
-            }
-            function j(Y, N) {
-              if (typeof N != "function" && N !== null)
-                throw new TypeError(
-                  "Super expression must either be null or a function"
-                );
-              (Y.prototype = Object.create(N && N.prototype, {
-                constructor: { value: Y, writable: !0, configurable: !0 },
-              })),
-                N && se(Y, N);
-            }
-            function se(Y, N) {
-              return (
-                (se =
-                  Object.setPrototypeOf ||
-                  function (Q, z) {
-                    return (Q.__proto__ = z), Q;
-                  }),
-                se(Y, N)
-              );
-            }
-            function Ne(Y) {
-              var N = fe();
-              return function () {
-                var Q = $(Y),
-                  z;
-                if (N) {
-                  var J = $(this).constructor;
-                  z = Reflect.construct(Q, arguments, J);
-                } else z = Q.apply(this, arguments);
-                return At(this, z);
-              };
-            }
-            function At(Y, N) {
-              return N && (Z(N) === "object" || typeof N == "function")
-                ? N
-                : ge(Y);
-            }
-            function ge(Y) {
-              if (Y === void 0)
-                throw new ReferenceError(
-                  "this hasn't been initialised - super() hasn't been called"
-                );
-              return Y;
-            }
-            function fe() {
-              if (
-                typeof Reflect > "u" ||
-                !Reflect.construct ||
-                Reflect.construct.sham
-              )
-                return !1;
-              if (typeof Proxy == "function") return !0;
-              try {
-                return (
-                  Date.prototype.toString.call(
-                    Reflect.construct(Date, [], function () {})
-                  ),
-                  !0
-                );
-              } catch {
-                return !1;
-              }
-            }
-            function $(Y) {
-              return (
-                ($ = Object.setPrototypeOf
-                  ? Object.getPrototypeOf
-                  : function (L) {
-                      return L.__proto__ || Object.getPrototypeOf(L);
-                    }),
-                $(Y)
-              );
-            }
-            function Pe(Y, N) {
-              var L = "data-clipboard-".concat(Y);
-              if (!!N.hasAttribute(L)) return N.getAttribute(L);
-            }
-            var $t = (function (Y) {
-                j(L, Y);
-                var N = Ne(L);
-                function L(Q, z) {
-                  var J;
-                  return (
-                    ee(this, L),
-                    (J = N.call(this)),
-                    J.resolveOptions(z),
-                    J.listenClick(Q),
-                    J
-                  );
-                }
-                return (
-                  he(
-                    L,
-                    [
-                      {
-                        key: "resolveOptions",
-                        value: function () {
-                          var z =
-                            arguments.length > 0 && arguments[0] !== void 0
-                              ? arguments[0]
-                              : {};
-                          (this.action =
-                            typeof z.action == "function"
-                              ? z.action
-                              : this.defaultAction),
-                            (this.target =
-                              typeof z.target == "function"
-                                ? z.target
-                                : this.defaultTarget),
-                            (this.text =
-                              typeof z.text == "function"
-                                ? z.text
-                                : this.defaultText),
-                            (this.container =
-                              Z(z.container) === "object"
-                                ? z.container
-                                : document.body);
-                        },
-                      },
-                      {
-                        key: "listenClick",
-                        value: function (z) {
-                          var J = this;
-                          this.listener = m()(z, "click", function (Ce) {
-                            return J.onClick(Ce);
-                          });
-                        },
-                      },
-                      {
-                        key: "onClick",
-                        value: function (z) {
-                          var J = z.delegateTarget || z.currentTarget,
-                            Ce = this.action(J) || "copy",
-                            Et = Ue({
-                              action: Ce,
-                              container: this.container,
-                              target: this.target(J),
-                              text: this.text(J),
-                            });
-                          this.emit(Et ? "success" : "error", {
-                            action: Ce,
-                            text: Et,
-                            trigger: J,
-                            clearSelection: function () {
-                              J && J.focus(),
-                                window.getSelection().removeAllRanges();
-                            },
-                          });
-                        },
-                      },
-                      {
-                        key: "defaultAction",
-                        value: function (z) {
-                          return Pe("action", z);
-                        },
-                      },
-                      {
-                        key: "defaultTarget",
-                        value: function (z) {
-                          var J = Pe("target", z);
-                          if (J) return document.querySelector(J);
-                        },
-                      },
-                      {
-                        key: "defaultText",
-                        value: function (z) {
-                          return Pe("text", z);
-                        },
-                      },
-                      {
-                        key: "destroy",
-                        value: function () {
-                          this.listener.destroy();
-                        },
-                      },
-                    ],
-                    [
-                      {
-                        key: "copy",
-                        value: function (z) {
-                          var J =
-                            arguments.length > 1 && arguments[1] !== void 0
-                              ? arguments[1]
-                              : { container: document.body };
-                          return te(z, J);
-                        },
-                      },
-                      {
-                        key: "cut",
-                        value: function (z) {
-                          return S(z);
-                        },
-                      },
-                      {
-                        key: "isSupported",
-                        value: function () {
-                          var z =
-                              arguments.length > 0 && arguments[0] !== void 0
-                                ? arguments[0]
-                                : ["copy", "cut"],
-                            J = typeof z == "string" ? [z] : z,
-                            Ce = !!document.queryCommandSupported;
-                          return (
-                            J.forEach(function (Et) {
-                              Ce = Ce && !!document.queryCommandSupported(Et);
-                            }),
-                            Ce
-                          );
-                        },
-                      },
-                    ]
-                  ),
-                  L
-                );
-              })(d()),
-              xt = $t;
-          },
-          828: function (i) {
-            var a = 9;
-            if (typeof Element < "u" && !Element.prototype.matches) {
-              var r = Element.prototype;
-              r.matches =
-                r.matchesSelector ||
-                r.mozMatchesSelector ||
-                r.msMatchesSelector ||
-                r.oMatchesSelector ||
-                r.webkitMatchesSelector;
-            }
-            function c(d, u) {
-              for (; d && d.nodeType !== a; ) {
-                if (typeof d.matches == "function" && d.matches(u)) return d;
-                d = d.parentNode;
-              }
-            }
-            i.exports = c;
-          },
-          438: function (i, a, r) {
-            var c = r(828);
-            function d(g, O, k, D, S) {
-              var M = m.apply(this, arguments);
-              return (
-                g.addEventListener(k, M, S),
-                {
-                  destroy: function () {
-                    g.removeEventListener(k, M, S);
+            return (
+              he(
+                L,
+                [
+                  {
+                    key: "resolveOptions",
+                    value: function () {
+                      var z =
+                        arguments.length > 0 && arguments[0] !== void 0
+                          ? arguments[0]
+                          : {};
+                      (this.action =
+                        typeof z.action == "function"
+                          ? z.action
+                          : this.defaultAction),
+                        (this.target =
+                          typeof z.target == "function"
+                            ? z.target
+                            : this.defaultTarget),
+                        (this.text =
+                          typeof z.text == "function"
+                            ? z.text
+                            : this.defaultText),
+                        (this.container =
+                          Z(z.container) === "object"
+                            ? z.container
+                            : document.body);
+                    },
                   },
-                }
-              );
+                  {
+                    key: "listenClick",
+                    value: function (z) {
+                      var J = this;
+                      this.listener = m()(z, "click", function (Ce) {
+                        return J.onClick(Ce);
+                      });
+                    },
+                  },
+                  {
+                    key: "onClick",
+                    value: function (z) {
+                      var J = z.delegateTarget || z.currentTarget,
+                        Ce = this.action(J) || "copy",
+                        Et = Ue({
+                          action: Ce,
+                          container: this.container,
+                          target: this.target(J),
+                          text: this.text(J),
+                        });
+                      this.emit(Et ? "success" : "error", {
+                        action: Ce,
+                        text: Et,
+                        trigger: J,
+                        clearSelection: function () {
+                          J && J.focus(),
+                            window.getSelection().removeAllRanges();
+                        },
+                      });
+                    },
+                  },
+                  {
+                    key: "defaultAction",
+                    value: function (z) {
+                      return Pe("action", z);
+                    },
+                  },
+                  {
+                    key: "defaultTarget",
+                    value: function (z) {
+                      var J = Pe("target", z);
+                      if (J) return document.querySelector(J);
+                    },
+                  },
+                  {
+                    key: "defaultText",
+                    value: function (z) {
+                      return Pe("text", z);
+                    },
+                  },
+                  {
+                    key: "destroy",
+                    value: function () {
+                      this.listener.destroy();
+                    },
+                  },
+                ],
+                [
+                  {
+                    key: "copy",
+                    value: function (z) {
+                      var J =
+                        arguments.length > 1 && arguments[1] !== void 0
+                          ? arguments[1]
+                          : { container: document.body };
+                      return te(z, J);
+                    },
+                  },
+                  {
+                    key: "cut",
+                    value: function (z) {
+                      return S(z);
+                    },
+                  },
+                  {
+                    key: "isSupported",
+                    value: function () {
+                      var z =
+                        arguments.length > 0 && arguments[0] !== void 0
+                          ? arguments[0]
+                          : ["copy", "cut"],
+                        J = typeof z == "string" ? [z] : z,
+                        Ce = !!document.queryCommandSupported;
+                      return (
+                        J.forEach(function (Et) {
+                          Ce = Ce && !!document.queryCommandSupported(Et);
+                        }),
+                        Ce
+                      );
+                    },
+                  },
+                ]
+              ),
+              L
+            );
+          })(d()),
+            xt = $t;
+        },
+        828: function (i) {
+          var a = 9;
+          if (typeof Element < "u" && !Element.prototype.matches) {
+            var r = Element.prototype;
+            r.matches =
+              r.matchesSelector ||
+              r.mozMatchesSelector ||
+              r.msMatchesSelector ||
+              r.oMatchesSelector ||
+              r.webkitMatchesSelector;
+          }
+          function c(d, u) {
+            for (; d && d.nodeType !== a;) {
+              if (typeof d.matches == "function" && d.matches(u)) return d;
+              d = d.parentNode;
             }
-            function u(g, O, k, D, S) {
-              return typeof g.addEventListener == "function"
-                ? d.apply(null, arguments)
-                : typeof k == "function"
+          }
+          i.exports = c;
+        },
+        438: function (i, a, r) {
+          var c = r(828);
+          function d(g, O, k, D, S) {
+            var M = m.apply(this, arguments);
+            return (
+              g.addEventListener(k, M, S),
+              {
+                destroy: function () {
+                  g.removeEventListener(k, M, S);
+                },
+              }
+            );
+          }
+          function u(g, O, k, D, S) {
+            return typeof g.addEventListener == "function"
+              ? d.apply(null, arguments)
+              : typeof k == "function"
                 ? d.bind(null, document).apply(null, arguments)
                 : (typeof g == "string" && (g = document.querySelectorAll(g)),
                   Array.prototype.map.call(g, function (M) {
                     return d(M, O, k, D, S);
                   }));
-            }
-            function m(g, O, k, D) {
-              return function (S) {
-                (S.delegateTarget = c(S.target, O)),
-                  S.delegateTarget && D.call(g, S);
-              };
-            }
-            i.exports = u;
-          },
-          879: function (i, a) {
-            (a.node = function (r) {
-              return (
-                r !== void 0 && r instanceof HTMLElement && r.nodeType === 1
-              );
-            }),
-              (a.nodeList = function (r) {
-                var c = Object.prototype.toString.call(r);
-                return (
-                  r !== void 0 &&
-                  (c === "[object NodeList]" ||
-                    c === "[object HTMLCollection]") &&
-                  "length" in r &&
-                  (r.length === 0 || a.node(r[0]))
-                );
-              }),
-              (a.string = function (r) {
-                return typeof r == "string" || r instanceof String;
-              }),
-              (a.fn = function (r) {
-                var c = Object.prototype.toString.call(r);
-                return c === "[object Function]";
-              });
-          },
-          370: function (i, a, r) {
-            var c = r(879),
-              d = r(438);
-            function u(k, D, S) {
-              if (!k && !D && !S) throw new Error("Missing required arguments");
-              if (!c.string(D))
-                throw new TypeError("Second argument must be a String");
-              if (!c.fn(S))
-                throw new TypeError("Third argument must be a Function");
-              if (c.node(k)) return m(k, D, S);
-              if (c.nodeList(k)) return g(k, D, S);
-              if (c.string(k)) return O(k, D, S);
-              throw new TypeError(
-                "First argument must be a String, HTMLElement, HTMLCollection, or NodeList"
-              );
-            }
-            function m(k, D, S) {
-              return (
-                k.addEventListener(D, S),
-                {
-                  destroy: function () {
-                    k.removeEventListener(D, S);
-                  },
-                }
-              );
-            }
-            function g(k, D, S) {
-              return (
-                Array.prototype.forEach.call(k, function (M) {
-                  M.addEventListener(D, S);
-                }),
-                {
-                  destroy: function () {
-                    Array.prototype.forEach.call(k, function (M) {
-                      M.removeEventListener(D, S);
-                    });
-                  },
-                }
-              );
-            }
-            function O(k, D, S) {
-              return d(document.body, k, D, S);
-            }
-            i.exports = u;
-          },
-          817: function (i) {
-            function a(r) {
-              var c;
-              if (r.nodeName === "SELECT") r.focus(), (c = r.value);
-              else if (r.nodeName === "INPUT" || r.nodeName === "TEXTAREA") {
-                var d = r.hasAttribute("readonly");
-                d || r.setAttribute("readonly", ""),
-                  r.select(),
-                  r.setSelectionRange(0, r.value.length),
-                  d || r.removeAttribute("readonly"),
-                  (c = r.value);
-              } else {
-                r.hasAttribute("contenteditable") && r.focus();
-                var u = window.getSelection(),
-                  m = document.createRange();
-                m.selectNodeContents(r),
-                  u.removeAllRanges(),
-                  u.addRange(m),
-                  (c = u.toString());
-              }
-              return c;
-            }
-            i.exports = a;
-          },
-          279: function (i) {
-            function a() {}
-            (a.prototype = {
-              on: function (r, c, d) {
-                var u = this.e || (this.e = {});
-                return (u[r] || (u[r] = [])).push({ fn: c, ctx: d }), this;
-              },
-              once: function (r, c, d) {
-                var u = this;
-                function m() {
-                  u.off(r, m), c.apply(d, arguments);
-                }
-                return (m._ = c), this.on(r, m, d);
-              },
-              emit: function (r) {
-                var c = [].slice.call(arguments, 1),
-                  d = ((this.e || (this.e = {}))[r] || []).slice(),
-                  u = 0,
-                  m = d.length;
-                for (u; u < m; u++) d[u].fn.apply(d[u].ctx, c);
-                return this;
-              },
-              off: function (r, c) {
-                var d = this.e || (this.e = {}),
-                  u = d[r],
-                  m = [];
-                if (u && c)
-                  for (var g = 0, O = u.length; g < O; g++)
-                    u[g].fn !== c && u[g].fn._ !== c && m.push(u[g]);
-                return m.length ? (d[r] = m) : delete d[r], this;
-              },
-            }),
-              (i.exports = a),
-              (i.exports.TinyEmitter = a);
-          },
+          }
+          function m(g, O, k, D) {
+            return function (S) {
+              (S.delegateTarget = c(S.target, O)),
+                S.delegateTarget && D.call(g, S);
+            };
+          }
+          i.exports = u;
         },
+        879: function (i, a) {
+          (a.node = function (r) {
+            return (
+              r !== void 0 && r instanceof HTMLElement && r.nodeType === 1
+            );
+          }),
+            (a.nodeList = function (r) {
+              var c = Object.prototype.toString.call(r);
+              return (
+                r !== void 0 &&
+                (c === "[object NodeList]" ||
+                  c === "[object HTMLCollection]") &&
+                "length" in r &&
+                (r.length === 0 || a.node(r[0]))
+              );
+            }),
+            (a.string = function (r) {
+              return typeof r == "string" || r instanceof String;
+            }),
+            (a.fn = function (r) {
+              var c = Object.prototype.toString.call(r);
+              return c === "[object Function]";
+            });
+        },
+        370: function (i, a, r) {
+          var c = r(879),
+            d = r(438);
+          function u(k, D, S) {
+            if (!k && !D && !S) throw new Error("Missing required arguments");
+            if (!c.string(D))
+              throw new TypeError("Second argument must be a String");
+            if (!c.fn(S))
+              throw new TypeError("Third argument must be a Function");
+            if (c.node(k)) return m(k, D, S);
+            if (c.nodeList(k)) return g(k, D, S);
+            if (c.string(k)) return O(k, D, S);
+            throw new TypeError(
+              "First argument must be a String, HTMLElement, HTMLCollection, or NodeList"
+            );
+          }
+          function m(k, D, S) {
+            return (
+              k.addEventListener(D, S),
+              {
+                destroy: function () {
+                  k.removeEventListener(D, S);
+                },
+              }
+            );
+          }
+          function g(k, D, S) {
+            return (
+              Array.prototype.forEach.call(k, function (M) {
+                M.addEventListener(D, S);
+              }),
+              {
+                destroy: function () {
+                  Array.prototype.forEach.call(k, function (M) {
+                    M.removeEventListener(D, S);
+                  });
+                },
+              }
+            );
+          }
+          function O(k, D, S) {
+            return d(document.body, k, D, S);
+          }
+          i.exports = u;
+        },
+        817: function (i) {
+          function a(r) {
+            var c;
+            if (r.nodeName === "SELECT") r.focus(), (c = r.value);
+            else if (r.nodeName === "INPUT" || r.nodeName === "TEXTAREA") {
+              var d = r.hasAttribute("readonly");
+              d || r.setAttribute("readonly", ""),
+                r.select(),
+                r.setSelectionRange(0, r.value.length),
+                d || r.removeAttribute("readonly"),
+                (c = r.value);
+            } else {
+              r.hasAttribute("contenteditable") && r.focus();
+              var u = window.getSelection(),
+                m = document.createRange();
+              m.selectNodeContents(r),
+                u.removeAllRanges(),
+                u.addRange(m),
+                (c = u.toString());
+            }
+            return c;
+          }
+          i.exports = a;
+        },
+        279: function (i) {
+          function a() { }
+          (a.prototype = {
+            on: function (r, c, d) {
+              var u = this.e || (this.e = {});
+              return (u[r] || (u[r] = [])).push({ fn: c, ctx: d }), this;
+            },
+            once: function (r, c, d) {
+              var u = this;
+              function m() {
+                u.off(r, m), c.apply(d, arguments);
+              }
+              return (m._ = c), this.on(r, m, d);
+            },
+            emit: function (r) {
+              var c = [].slice.call(arguments, 1),
+                d = ((this.e || (this.e = {}))[r] || []).slice(),
+                u = 0,
+                m = d.length;
+              for (u; u < m; u++) d[u].fn.apply(d[u].ctx, c);
+              return this;
+            },
+            off: function (r, c) {
+              var d = this.e || (this.e = {}),
+                u = d[r],
+                m = [];
+              if (u && c)
+                for (var g = 0, O = u.length; g < O; g++)
+                  u[g].fn !== c && u[g].fn._ !== c && m.push(u[g]);
+              return m.length ? (d[r] = m) : delete d[r], this;
+            },
+          }),
+            (i.exports = a),
+            (i.exports.TinyEmitter = a);
+        },
+      },
         n = {};
       function o(i) {
         if (n[i]) return n[i].exports;
@@ -4453,11 +4453,11 @@ var fa = { exports: {} };
             var a =
               i && i.__esModule
                 ? function () {
-                    return i.default;
-                  }
+                  return i.default;
+                }
                 : function () {
-                    return i;
-                  };
+                  return i;
+                };
             return o.d(a, { a }), a;
           };
         })(),
@@ -4521,20 +4521,20 @@ function Zo(e) {
   return pa(e) ? e.targetTouches[0].clientY : e.clientY;
 }
 var kl = (e) => {
-    jt(e.remove) ? e.parentNode && e.parentNode.removeChild(e) : e.remove();
-  },
+  jt(e.remove) ? e.parentNode && e.parentNode.removeChild(e) : e.remove();
+},
   _s = (e) =>
     ha(e)
       ? _s(e.component)
       : Sl(e)
-      ? ve({
+        ? ve({
           render() {
             return e;
           },
         })
-      : typeof e == "string"
-      ? e
-      : X(T(e)),
+        : typeof e == "string"
+          ? e
+          : X(T(e)),
   Tl = (e) => {
     if (typeof e == "string") return e;
     const t = nt(e, "props") && gs(e.props) ? e.props : {},
@@ -4846,8 +4846,8 @@ var rd = Ia,
         return cn(this.customIcon)
           ? this.trimValue(this.customIcon)
           : nt(this.customIcon, "iconClass")
-          ? this.trimValue(this.customIcon.iconClass)
-          : "";
+            ? this.trimValue(this.customIcon.iconClass)
+            : "";
       },
       customIconTag() {
         return nt(this.customIcon, "iconTag")
@@ -4861,8 +4861,8 @@ var rd = Ia,
         return this.hasCustomIcon
           ? this.customIconTag
           : ga(this.customIcon)
-          ? _s(this.customIcon)
-          : this.iconTypeComponent;
+            ? _s(this.customIcon)
+            : this.iconTypeComponent;
       },
       iconTypeComponent() {
         return {
@@ -4935,11 +4935,11 @@ var ld = xa,
         return this.dragStart === this.dragPos.x
           ? {}
           : this.beingDragged
-          ? {
+            ? {
               transform: `translateX(${this.dragDelta}px)`,
               opacity: 1 - Math.abs(this.dragDelta / this.removalDistance),
             }
-          : {
+            : {
               transition: "transform 0.2s, opacity 0.2s",
               transform: "translateX(0)",
               opacity: 1,
@@ -4971,8 +4971,8 @@ var ld = xa,
       clickHandler() {
         this.onClick && this.onClick(this.closeToast),
           this.closeOnClick &&
-            (!this.beingDragged || this.dragStart === this.dragPos.x) &&
-            this.closeToast();
+          (!this.beingDragged || this.dragStart === this.dragPos.x) &&
+          this.closeToast();
       },
       timeoutHandler() {
         this.closeToast();
@@ -5024,8 +5024,8 @@ var ld = xa,
       onDragMove(e) {
         this.beingDragged &&
           (e.preventDefault(),
-          this.isRunning && (this.isRunning = !1),
-          (this.dragPos = { x: mn(e), y: Zo(e) }));
+            this.isRunning && (this.isRunning = !1),
+            (this.dragPos = { x: mn(e), y: Zo(e) }));
       },
       onDragEnd() {
         this.beingDragged &&
@@ -5033,16 +5033,16 @@ var ld = xa,
             ? ((this.disableTransitions = !0),
               this.$nextTick(() => this.closeToast()))
             : setTimeout(() => {
-                (this.beingDragged = !1),
-                  Ko(this.dragRect) &&
+              (this.beingDragged = !1),
+                Ko(this.dragRect) &&
                   this.pauseOnHover &&
                   this.dragRect.bottom >= this.dragPos.y &&
                   this.dragPos.y >= this.dragRect.top &&
                   this.dragRect.left <= this.dragPos.x &&
                   this.dragPos.x <= this.dragRect.right
-                    ? (this.isRunning = !1)
-                    : (this.isRunning = !0);
-              }));
+                  ? (this.isRunning = !1)
+                  : (this.isRunning = !0);
+            }));
       },
     },
   }),
@@ -5158,9 +5158,9 @@ var ud = Ea,
       leave(e) {
         e instanceof HTMLElement &&
           ((e.style.left = e.offsetLeft + "px"),
-          (e.style.top = e.offsetTop + "px"),
-          (e.style.width = getComputedStyle(e).width),
-          (e.style.position = "absolute"));
+            (e.style.top = e.offsetTop + "px"),
+            (e.style.width = getComputedStyle(e).width),
+            (e.style.position = "absolute"));
       },
     },
   });
@@ -5233,13 +5233,13 @@ var pd = Ba,
       addToast(e) {
         e.content = Tl(e.content);
         const t = Object.assign(
-            {},
-            this.defaults,
-            e.type &&
-              this.defaults.toastDefaults &&
-              this.defaults.toastDefaults[e.type],
-            e
-          ),
+          {},
+          this.defaults,
+          e.type &&
+          this.defaults.toastDefaults &&
+          this.defaults.toastDefaults[e.type],
+          e
+        ),
           s = this.defaults.filterBeforeCreate(t, this.toastArray);
         s && this.setToast(s);
       },
@@ -5280,43 +5280,43 @@ function hd(e, t) {
     h(),
     v("div", null, [
       (h(!0),
-      v(
-        ue,
-        null,
-        bt(
-          e.positions,
-          (o) => (
-            h(),
-            v("div", { key: o }, [
-              B(
-                n,
-                {
-                  transition: e.defaults.transition,
-                  class: be(e.getClasses(o)),
-                },
-                {
-                  default: it(() => [
-                    (h(!0),
-                    v(
-                      ue,
-                      null,
-                      bt(
-                        e.getPositionToasts(o),
-                        (i) => (h(), Te(s, nn({ key: i.id }, i), null, 16))
-                      ),
-                      128
-                    )),
-                  ]),
-                  _: 2,
-                },
-                1032,
-                ["transition", "class"]
-              ),
-            ])
-          )
-        ),
-        128
-      )),
+        v(
+          ue,
+          null,
+          bt(
+            e.positions,
+            (o) => (
+              h(),
+              v("div", { key: o }, [
+                B(
+                  n,
+                  {
+                    transition: e.defaults.transition,
+                    class: be(e.getClasses(o)),
+                  },
+                  {
+                    default: it(() => [
+                      (h(!0),
+                        v(
+                          ue,
+                          null,
+                          bt(
+                            e.getPositionToasts(o),
+                            (i) => (h(), Te(s, nn({ key: i.id }, i), null, 16))
+                          ),
+                          128
+                        )),
+                    ]),
+                    _: 2,
+                  },
+                  1032,
+                  ["transition", "class"]
+                ),
+              ])
+            )
+          ),
+          128
+        )),
     ])
   );
 }
@@ -5333,8 +5333,8 @@ var gd = Sa,
           const c = e.shareAppContext;
           c === !0
             ? console.warn(
-                `[${We}] App to share context with was not provided.`
-              )
+              `[${We}] App to share context with was not provided.`
+            )
             : ((i._context.components = c._context.components),
               (i._context.directives = c._context.directives),
               (i._context.mixins = c._context.mixins),
@@ -5462,7 +5462,7 @@ const Xt = (e) => (Be("data-v-a9b2508f"), (e = e()), Se(), e),
         vs(() => {
           (a = document.querySelector(s.target)),
             a &&
-              (a.addEventListener("mousemove", c),
+            (a.addEventListener("mousemove", c),
               a.addEventListener("mouseleave", d));
           const u = new Cl("#btn-copy");
           u.on("success", function (m) {
@@ -5502,7 +5502,7 @@ const Xt = (e) => (Be("data-v-a9b2508f"), (e = e()), Se(), e),
         en(() => {
           a &&
             (a.removeEventListener("mouseenter", c),
-            a.removeEventListener("mouseleave", d));
+              a.removeEventListener("mouseleave", d));
         }),
         (u, m) => {
           const g = ct("SvgIcon");
@@ -5665,68 +5665,68 @@ const Qd = { class: "hey-menu" },
           A("div", Ud, [
             A("div", Jd, [
               (h(!0),
-              v(
-                ue,
-                null,
-                bt(
-                  e.list,
-                  (n) => (
-                    h(),
-                    v(
-                      "div",
-                      { class: be({ menu_group: !0, thin: n.thin }) },
-                      [
-                        n.title
-                          ? (h(), v("label", zd, Ie(n.title), 1))
-                          : st("", !0),
-                        (h(!0),
-                        v(
-                          ue,
-                          null,
-                          bt(
-                            n.list,
-                            (o) => (
-                              h(),
-                              v("div", Kd, [
-                                A("div", Zd, [
-                                  o.label
-                                    ? (h(), v("label", Wd, Ie(o.label), 1))
-                                    : st("", !0),
-                                  Ge(" " + Ie(o.title), 1),
-                                ]),
-                                A("div", Vd, [
-                                  (h(!0),
-                                  v(
-                                    ue,
-                                    null,
-                                    bt(
-                                      o.links,
-                                      (i) => (
-                                        h(),
+                v(
+                  ue,
+                  null,
+                  bt(
+                    e.list,
+                    (n) => (
+                      h(),
+                      v(
+                        "div",
+                        { class: be({ menu_group: !0, thin: n.thin }) },
+                        [
+                          n.title
+                            ? (h(), v("label", zd, Ie(n.title), 1))
+                            : st("", !0),
+                          (h(!0),
+                            v(
+                              ue,
+                              null,
+                              bt(
+                                n.list,
+                                (o) => (
+                                  h(),
+                                  v("div", Kd, [
+                                    A("div", Zd, [
+                                      o.label
+                                        ? (h(), v("label", Wd, Ie(o.label), 1))
+                                        : st("", !0),
+                                      Ge(" " + Ie(o.title), 1),
+                                    ]),
+                                    A("div", Vd, [
+                                      (h(!0),
                                         v(
-                                          "a",
-                                          { href: i[1], target: "_blank" },
-                                          [A("span", null, Ie(i[0]), 1), B(no)],
-                                          8,
-                                          Gd
-                                        )
-                                      )
-                                    ),
-                                    256
-                                  )),
-                                ]),
-                              ])
-                            )
-                          ),
-                          256
-                        )),
-                      ],
-                      2
+                                          ue,
+                                          null,
+                                          bt(
+                                            o.links,
+                                            (i) => (
+                                              h(),
+                                              v(
+                                                "a",
+                                                { href: i[1], target: "_blank" },
+                                                [A("span", null, Ie(i[0]), 1), B(no)],
+                                                8,
+                                                Gd
+                                              )
+                                            )
+                                          ),
+                                          256
+                                        )),
+                                    ]),
+                                  ])
+                                )
+                              ),
+                              256
+                            )),
+                        ],
+                        2
+                      )
                     )
-                  )
-                ),
-                256
-              )),
+                  ),
+                  256
+                )),
             ]),
           ]),
         ])
@@ -5795,8 +5795,8 @@ const qd = {
   },
 };
 const $d = {
-    __name: "deve",
-    setup(e) {
+  __name: "deve",
+  setup(e) {
     //   const t = [
     //     {
     //       title: "",
@@ -5828,8 +5828,8 @@ const $d = {
     //   return (s, n) => (
     //     h(), Te(Ta, { class: "deve-menu", title: "Developers", list: t })
     //   );
-    },
   },
+},
   ef = {
     __name: "index",
     setup(e) {
@@ -5917,45 +5917,39 @@ const $d = {
               nf,
               x(
                 (h(),
-                v(
-                  "nav",
-                  { class: be(["homeHeader-nav", { "is-active": t.value }]) },
-                  [
-                    A(
-                      "span",
-                      { class: "homeHeader-nav-home", onClick: n },
-                      "Home"
-                    ),
-                    B(ef),
-                    // A("a", { class: "navLink", onClick: i }, "Ecosystem"),
-                    // A("a", { class: "navLink", onClick: a }, "Partners"),
-                    of,
-                    B(
-                      da,
-                      {
-                        class: be(["homeHeader-btn", { "is-turn": s.value }]),
-                        "enable-hover": !1,
-                      },
-                      {
-                        default: it(() => [
-                          B(u, {
-                            icon: "btn-PHB-BSC-Contract",
-                            svgStyle: { width: "82px" },
-                          }),
+                  v(
+                    "nav",
+                    { class: be(["homeHeader-nav", { "is-active": t.value }]) },
+                    [
+                      A(
+                        "span",
+                        { class: "homeHeader-nav-home", onClick: n },
+                        "Home"
+                      ),
+                      B(ef),
+                      // A("a", { class: "navLink", onClick: i }, "Ecosystem"),
+                      // A("a", { class: "navLink", onClick: a }, "Partners"),
+                      of,
+                      B(
+                        da,
+                        {
+                          class: be(["homeHeader-btn", { "is-turn": s.value }]),
+                          "enable-hover": !1,
+                        },
+                        [
+                          "SkyNet Contract",
                           B(u, { id: "arrow-down", icon: "arrow-down" }),
                           B(Od, {
                             target: ".homeHeader-btn",
                             onVisible: d[0] || (d[0] = (g) => (s.value = g)),
                           }),
-                        ]),
-                        _: 1,
-                      },
-                      8,
-                      ["class"]
-                    ),
-                  ],
-                  2
-                )),
+                        ],
+                        8,
+                        ["class"]
+                      ),
+                    ],
+                    2
+                  )),
                 [[m, r]]
               ),
               B(yl, { id: "hamburger", active: t.value, onClick: n }, null, 8, [
@@ -6003,9 +5997,9 @@ function hf(e, t) {
   return h(), v("section", null, pf);
 }
 const gf = ce(ff, [
-    ["render", hf],
-    ["__scopeId", "data-v-586ba597"],
-  ]),
+  ["render", hf],
+  ["__scopeId", "data-v-586ba597"],
+]),
   mf = "/assets/herovideo.480p.38fb2110.mp4",
   vf = "/assets/ff_herovideo.2.b28c7dfb.jpg",
   _f = { class: "heroImage" },
@@ -6018,7 +6012,7 @@ const gf = ce(ff, [
     setup(e) {
       const t = Re(!0);
       function s() {
-        window.open("", "_blank");
+        window.open("https://app-skynetai.vercel.app/", "_blank");
       }
       function n(o) {
         t.value = !1;
@@ -6033,18 +6027,16 @@ const gf = ce(ff, [
                 B(gf),
                 B(
                   da,
-                  { class: "heroImage-btn font-tomkin_bold", onClick: s },
-                  {
-                    default: it(() => [
-                      B(a, { id: "arrow-right", icon: "arrow-line-right" }),
-                      B(a, { id: "stakeYourPHB", icon: "btn-StakeYourPHB" }),
-                    ]),
-                    _: 1,
-                  }
+                  { class: "heroImage-btn font-tomkin_bold", onClick: s, },
+                  [
+                    B(a, { id: "arrow-right", icon: "arrow-line-right" }),
+                    "Buy $SkyNet"
+                  ]
                 ),
                 B(df, { class: "heroImage-mouse" }),
               ]),
             ]),
+
             t.value
               ? (h(),
                 v(
@@ -6080,9 +6072,9 @@ function Sf(e, t) {
   return h(), v("div", Bf);
 }
 const Xo = ce(Ef, [
-    ["render", Sf],
-    ["__scopeId", "data-v-4ea9eeab"],
-  ]),
+  ["render", Sf],
+  ["__scopeId", "data-v-4ea9eeab"],
+]),
   Of = "/assets/head.2f2bd7af.png",
   Nf =
     "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQ4AAAAoCAYAAAAPMxQ6AAAAAXNSR0IArs4c6QAACetJREFUeF7tnXnMtscUxq+LahSllnyIvSgRYou1iYqtikorKlqRCLpY00papaWqC0ps1dpjCVGhhITYt7SW8IctIbYQFUtt5bNUyiXnNc/neZ/3vmfO3Pfcy/M+M8n713tmOzPP7z5z5swMEUmSzgBwbkxm4P/dluQv2+qQ9FMAB0facAjJH5dqo6TDAXwUwAErZe4leWCkndcF8I9IO64heZ1S7VwtR9IfANwkUv4eklcm5sJVAKyPavk7neTrS/dB0jcB3CNS7v1Jfjei+8sAHFq6XT3L+x3Jm0fafGMAf+xZx6DZGWn8mQDOGbT2dOEpcPwMwB3GAIekowFcAmD/hvrmDg6bhDYZ25IHHH8J4Ggr4xoAh5P8QnpY/RKSDAoxcNyb5Lcj8/hyAA/21ziK5JUk9+w6cEiaAzRMr7MAh6SnAHg3gP1aBruC43+K+T2A+5H8eamfXwVHKU2WLWeHxSHpJQBeXraazqVNDg5JJwB4M4BrRXpRwfF/5djX/1CSf+886ksZKzhKaLF8GdvAMTNoTG5xSDoFwGsdaq/g2K6kS0ge69BbUqSCI6miSQT2gUPSSwGcPUkr2iudzOLIhOgVJG8TWbNO7Rwdw8ex2v3TSL6673yq4OirwWHyb4FjptCYzOKQ9CoApzlVfgWAR5L8YQXHNg38G8BjSH7GqcdGsQqOPtobLi9nDI3RwSHJQHohgOc4Vf4TAI8g+YuYvKRNtDhMJX8KzlLbNu+Udik41n87VpLty3vT+SQttmMWSVKx7VhJ1wbwDgBPc3bOtgkfRfK3KfkNBoep5vsAHkjybyk9Nf1/BHAcRvIrXdq2rnkknUWyl1vCLA4vOGYFjbDEKgIOSRZ89X4Axzgnw9cAPJakfVGTacPBYfq5lOQTk4pqEKjg6KK19jySXgHgFJJmBXdOXnCcR9JiO2aVSlgc4Uf9IQCPc3bucwCOyvmCVnBsafZMkuc5dbxPrIIjV2NRaLwSwAsBXD0GOGYJjRIWh6TrA/g4gIc5h8fCzZ9M8l9O+S2xCo4tNfwHwONJfiJTd0NHjm7EUkXSAhqm/lHAcS5JCwqbXepjcUi6EYBPZoQjW+ToM0nabkFWcoDDyjuD5PlZBTuEJT0PwBsToiVCzn8N4JaJeuy8i50t+ZGj6QvoVnB4ldUi17BLOAo4rDmzhEdXcEi6GYBPA7iPc0zeENaFXn/QtmKd4CgODyc0rN4S4DgsgNisuFj6AYAHkPyrR/d1qeLRUrtMS2jBaOCYJTy6gEOSfRXNT3E355CcTfJlTtlGsQxwWP5OvoDViiU9H4ABz5NKgOMgO+QG4IOOCm15aH6iJIgrOBza9FsaC8lRwTE7eOSCQ9LtAHwewB0dw2GT+gUljopngqM3PDKhUcriOIjkVcFrf7pDvy4gjwCOh5L8sqO9ayUi6QIAp7Y0ugg47Gt6VoZWkl+JjLLeCuDZni9PU5k54JB05wCN1tDwpTrMj3E8yXdl9CUquuKc8hTbR8+t1yU0VHwxyWTAm6TUsfoFOOwwoDlAH53opPXvaJIfi8mNAA7PWJSWiR6r71tZcPrvjZTTHxxWuKRcePTt23J+g8ezusDDCw5JdwfwWQC3cDTcdkyOJfkRh2yWSAd4ZJXfQfgiks/15POCI8wnW7bYBTx3SpRtfg7zd5jfozFVcHhGZ7vMaOAIg21WR6+1fH4X9+XoBA8POADY7smnANzU0T6LbrSvoEFmkJRhyg9S/1KhbmiE+eGyOBblSzIf0jcA3CDREbuhze7wsB2XHamCI38ajAqOdYSHAxxPB2DX2d3Qof4/h2jQrzpke4nMAB5Z0OgCjpDHbk27FEBq6WTb4keStFiPbamCI3+qjQ6OGcDjbQBO8i5bBgCHnea0cPLB04TweBNJi+3ISjlLleWCJdmZCLuyIZUajzRUcKTU1mil2Zb48D6OBspPeTeHGx4OcBwyt6XKyo/KAr5elD81OufoBI2uFkfIZ9aGOUCPdLT6GJIfXtHR0AFgjmYVF9kdztEmtUx83P7tAE5MWR4ecNgt5x2co8eRNBN78CRpLHhcSNJiOzqlrhZHgIctFc3fcddE5eZjehDJ7y3kqsWRP1yTLFVWaD/l/aNJeHjBESbvpNuxseGXZIe/Xpw/Rdw5ekGjj8WxBIC7BHiYszqW7MSzOUu3ngeo4HCP8T5BSeaQjkXmltmOTUzqlGMrp2cnAbjI4SxblFn06sAQAGZRo6ltwq05WyoAzKOgcImQR3RV5lYAjgh3iTTmT1lunkr7WBxL8LATyLZsiV38bOK2q3WEnQsaARy77pDb5BaHZ0LlykgyeFzshEdRcIQv2Ogh57k68spLMmh80R6JImnHpQdLJcAR9O995Os1JE+t4Mgf0l0JjjB5vPAoDo5Qf+4hNztdenKJL3f+NGjOEaDxpWA9XbBG4DAL1hygT3Do4rjgPB7yQaZqcTgGYlWk5DIkq3qn5TEIOAI8co/VvwfAM7ocq89SjENY0q2DpbFYcq0NOILubQ1u294W0RtL9mymvc8SC97r+5JbBYdjzs0JHMcDsIjRGLwGA0eYwLbfbWvuhzt1Zxf5WDj61U754mIBGmZpLB/UWytwBN1b+y0sPfY0pUd/FRwrWpqFc9Qzcrky4XW0tzj8HIOCI0xgu3tx0KsDc/XTJt8CDRNfO3AE3dsxfIsaTTlLYyqs4NgJjmkCwEpN9KZyMqBh2QcHR5jAdlnx+wA8ydn3r4c3Q1yXFTvLjIpJslO95ghtuhJgLcERdG/v19g7Nl1TBcduB4ekE8M7rF7fyijgCBM493kEC1Ky5xF+03XGe/MFaNjy5OCWPGsLjqD7D9hdrl59rMhVcEyxVJG042BRxwH0ZPMCw8p6Z7gTo/VeipwAME/jOj7IZK+4FXudvcVKs+Cw2A3h6w6O6wGww4X39IxTYXB0qLJ3lvUPOc94V6W3tjIKSEIjfKmKvKuy2q7MezN+FZ6AbL1TIqPfjaKSdjU4wljeHsC3nNcfLOupr8XRd3i65K/g6KK1RB57Te0ET8xEaYtjuV2S7B2Zc5z9iz467SyjVWwTwBHgYc9U2Fuztmz0pgqOnUuV4Z2jM7M43NAY0uJYjIOkkwG8zjGD95I80CHXSWRTwBHG1KvzhS4rODYcHMlDbQ1LikGWKiuWh8Wb2NZxbMuwggPYunO0Exl3Tvz3Aniqs6wKjg0Gh/sOjpUf9eDgCF9BC322yNH9WiZzBUdZcFhszWUA7uuARwXHhoKjEzTGWKqsQOqo8GbI/g2TuYKjIDjC2FrcijlL9yTgUcGxgeDodEnxkg9iFItjqT6LdLTbz237cDlVcBQGR4DHQ8LjWRag15buRfI7bf+UdHnGM58OA6eIyNS7Kv8keUCfnvwX+hD2Y6fuqe0AAAAASUVORK5CYII=",
@@ -6154,29 +6146,29 @@ const La = (e) => (Be("data-v-ae77c672"), (e = e()), Se(), e),
   Kf = { key: 0, class: "switch-panel-wrapper" },
   Zf = q(
     '<div class="links" data-v-ae77c672><a href="https://skynet.phoenix.global/" target="_blank" data-v-ae77c672><span data-v-ae77c672></span><img class="link" src="' +
-      Ys +
-      '" data-v-ae77c672></a><a href="https://computation-sdk.phoenix.global/" target="_blank" data-v-ae77c672><span data-v-ae77c672></span><img class="link" src="' +
-      Ys +
-      '" data-v-ae77c672></a></div>',
+    Ys +
+    '" data-v-ae77c672></a><a href="https://computation-sdk.phoenix.global/" target="_blank" data-v-ae77c672><span data-v-ae77c672></span><img class="link" src="' +
+    Ys +
+    '" data-v-ae77c672></a></div>',
     1
   ),
   Wf = {
     __name: "index",
     setup(e) {
       const t = Zs([
-          {
-            btn: "AI On-Demand",
-            txt: "Coordinate the deployment of ready-to-use AI and machine learning models with a click of a button. Scale computational capacity through our AI Node Network. SkyNet Control Panel enables codeless deployment and training of AI models, with support for IPFS data upload.",
-          },
-          {
-            btn: "AI Infrastructure Scaling",
-            txt: "Effortlessly scale AI compute resources via our AI Node Network for AI models such as deep learning, deep reinforcement learning, and large language models (LLM) - our AI Node Network helps users perform smart auto-resource allocation. SkyNet\u2019s task-based AI compute model dismisses the need to rent dedicated GPUs.",
-          },
-          {
-            btn: "Generative AI",
-            txt: "Fine-tune, customize, and utilize generative AI models with no code required, whether it\u2019s generating images or short videos, to customizing vertical LLMs for teams and enterprise. Skynet provides the leading decentralized PaaS (Platform-as-a-Service) for generative AI applications.",
-          },
-        ]),
+        {
+          btn: "AI On-Demand",
+          txt: "Coordinate the deployment of ready-to-use AI and machine learning models with a click of a button. Scale computational capacity through our AI Node Network. SkyNet Control Panel enables codeless deployment and training of AI models, with support for IPFS data upload.",
+        },
+        {
+          btn: "AI Infrastructure Scaling",
+          txt: "Effortlessly scale AI compute resources via our AI Node Network for AI models such as deep learning, deep reinforcement learning, and large language models (LLM) - our AI Node Network helps users perform smart auto-resource allocation. SkyNet\u2019s task-based AI compute model dismisses the need to rent dedicated GPUs.",
+        },
+        {
+          btn: "Generative AI",
+          txt: "Fine-tune, customize, and utilize generative AI models with no code required, whether it\u2019s generating images or short videos, to customizing vertical LLMs for teams and enterprise. Skynet provides the leading decentralized PaaS (Platform-as-a-Service) for generative AI applications.",
+        },
+      ]),
         s = Re(0),
         n = Re(!0);
       async function o(i) {
@@ -6190,40 +6182,40 @@ const La = (e) => (Be("data-v-ae77c672"), (e = e()), Se(), e),
             x((h(), v("div", Mf, Hf)), [[T(K)]]),
             x(
               (h(),
-              v("div", Qf, [
-                (h(!0),
-                v(
-                  ue,
-                  null,
-                  bt(
-                    t,
-                    (r, c) => (
-                      h(),
-                      v(
-                        "button",
-                        {
-                          class: be({ selected: s.value == c }),
-                          onClick: (d) => o(c),
-                        },
-                        [Ge(Ie(r.btn) + " ", 1), Jf],
-                        10,
-                        Uf
-                      )
-                    )
-                  ),
-                  256
-                )),
-              ])),
+                v("div", Qf, [
+                  (h(!0),
+                    v(
+                      ue,
+                      null,
+                      bt(
+                        t,
+                        (r, c) => (
+                          h(),
+                          v(
+                            "button",
+                            {
+                              class: be({ selected: s.value == c }),
+                              onClick: (d) => o(c),
+                            },
+                            [Ge(Ie(r.btn) + " ", 1), Jf],
+                            10,
+                            Uf
+                          )
+                        )
+                      ),
+                      256
+                    )),
+                ])),
               [[T(K), 200]]
             ),
             x(
               (h(),
-              v("div", zf, [
-                n.value
-                  ? (h(),
-                    v("div", Kf, [A("div", null, Ie(t[s.value].txt), 1), Zf]))
-                  : st("", !0),
-              ])),
+                v("div", zf, [
+                  n.value
+                    ? (h(),
+                      v("div", Kf, [A("div", null, Ie(t[s.value].txt), 1), Zf]))
+                    : st("", !0),
+                ])),
               [[T(K), 400]]
             ),
           ]),
@@ -6281,18 +6273,18 @@ const It = (e) => (Be("data-v-de8c539c"), (e = e()), Se(), e),
       return (t, s) =>
         x(
           (h(),
-          v("div", tu, [
-            su,
-            nu,
-            A("div", ou, [
-              iu,
-              A("div", au, [
-                x((h(), v("div", ru, du)), [[T(K), 200]]),
-                x((h(), v("div", fu, Au)), [[T(K), 400]]),
-                x((h(), v("div", pu, vu)), [[T(K), 600]]),
+            v("div", tu, [
+              su,
+              nu,
+              A("div", ou, [
+                iu,
+                A("div", au, [
+                  x((h(), v("div", ru, du)), [[T(K), 200]]),
+                  x((h(), v("div", fu, Au)), [[T(K), 400]]),
+                  x((h(), v("div", pu, vu)), [[T(K), 600]]),
+                ]),
               ]),
-            ]),
-          ])),
+            ])),
           [[T(K), 0]]
         );
     },
@@ -6324,10 +6316,10 @@ const ja = (e) => (Be("data-v-3d2a26a8"), (e = e()), Se(), e),
   ku = { class: "links" },
   Tu = q(
     '<a href="https://scan.phoenix.global/" target="_blank" data-v-3d2a26a8><span data-v-3d2a26a8></span><img class="link" src="' +
-      Ys +
-      '" data-v-3d2a26a8></a><a href="https://phoenixchain-sdk.phoenix.global" target="_blank" data-v-3d2a26a8><span data-v-3d2a26a8></span><img class="link" src="' +
-      Ys +
-      '" data-v-3d2a26a8></a>',
+    Ys +
+    '" data-v-3d2a26a8></a><a href="https://phoenixchain-sdk.phoenix.global" target="_blank" data-v-3d2a26a8><span data-v-3d2a26a8></span><img class="link" src="' +
+    Ys +
+    '" data-v-3d2a26a8></a>',
     3
   ),
   Pu = [Tu],
@@ -6543,12 +6535,12 @@ const ep = (e) => (Be("data-v-fd98f2e6"), (e = e()), Se(), e),
   ip = { class: "item" },
   ap = q(
     '<img class="head" src="' +
-      eA +
-      '" data-v-fd98f2e6><div class="body" data-v-fd98f2e6><img class="logo" src="' +
-      tA +
-      '" data-v-fd98f2e6><p data-v-fd98f2e6>AlphaNet is the AI platform for the crypto market, and is a native dApp built on Phoenix Layer 1 and AI-scaling infrastructure.</p><a href="https://alphanet.phoenix.global/" target="_blank" data-v-fd98f2e6><span data-v-fd98f2e6>Learn More</span><img src="' +
-      ae +
-      '" data-v-fd98f2e6></a></div>',
+    eA +
+    '" data-v-fd98f2e6><div class="body" data-v-fd98f2e6><img class="logo" src="' +
+    tA +
+    '" data-v-fd98f2e6><p data-v-fd98f2e6>AlphaNet is the AI platform for the crypto market, and is a native dApp built on Phoenix Layer 1 and AI-scaling infrastructure.</p><a href="https://alphanet.phoenix.global/" target="_blank" data-v-fd98f2e6><span data-v-fd98f2e6>Learn More</span><img src="' +
+    ae +
+    '" data-v-fd98f2e6></a></div>',
     2
   ),
   rp = [ap],
@@ -6567,300 +6559,300 @@ const ep = (e) => (Be("data-v-fd98f2e6"), (e = e()), Se(), e),
   fp = { class: "item" },
   up = q(
     '<img class="head" src="' +
-      oA +
-      '" data-v-fd98f2e6><div class="body" data-v-fd98f2e6><img class="logo" src="' +
-      iA +
-      '" data-v-fd98f2e6><p data-v-fd98f2e6>Horizon Protocol and its decentralized futures exchange utilizes AlphaNet and Phoenix SkyNet to create the first truly AI-enabled DEX.</p><a href="https://horizonprotocol.com/" target="_blank" data-v-fd98f2e6><span data-v-fd98f2e6>Learn More</span><img src="' +
-      ae +
-      '" data-v-fd98f2e6></a></div>',
+    oA +
+    '" data-v-fd98f2e6><div class="body" data-v-fd98f2e6><img class="logo" src="' +
+    iA +
+    '" data-v-fd98f2e6><p data-v-fd98f2e6>Horizon Protocol and its decentralized futures exchange utilizes AlphaNet and Phoenix SkyNet to create the first truly AI-enabled DEX.</p><a href="https://horizonprotocol.com/" target="_blank" data-v-fd98f2e6><span data-v-fd98f2e6>Learn More</span><img src="' +
+    ae +
+    '" data-v-fd98f2e6></a></div>',
     2
   ),
   Ap = [up],
   pp = { class: "item" },
   hp = q(
     '<img class="head" src="' +
-      aA +
-      '" data-v-fd98f2e6><div class="body" data-v-fd98f2e6><img class="logo llm" src="' +
-      rA +
-      '" data-v-fd98f2e6><p data-v-fd98f2e6>PhoenixLLM is a Large Language Model (LLM) built and run on Phoenix SkyNet, and is integrated with the Telegram ecosystem and Open Source frameworks.</p><a href="https://t.me/" target="_blank" data-v-fd98f2e6><span data-v-fd98f2e6>Use PhoenixLLM</span><img src="' +
-      ae +
-      '" data-v-fd98f2e6></a></div>',
+    aA +
+    '" data-v-fd98f2e6><div class="body" data-v-fd98f2e6><img class="logo llm" src="' +
+    rA +
+    '" data-v-fd98f2e6><p data-v-fd98f2e6>PhoenixLLM is a Large Language Model (LLM) built and run on Phoenix SkyNet, and is integrated with the Telegram ecosystem and Open Source frameworks.</p><a href="https://t.me/" target="_blank" data-v-fd98f2e6><span data-v-fd98f2e6>Use PhoenixLLM</span><img src="' +
+    ae +
+    '" data-v-fd98f2e6></a></div>',
     2
   ),
   gp = [hp],
   mp = { class: "item" },
   vp = q(
     '<img class="head" src="' +
-      cA +
-      '" data-v-fd98f2e6><div class="body" data-v-fd98f2e6><img class="logo genai" src="' +
-      lA +
-      '" data-v-fd98f2e6><p data-v-fd98f2e6>Phoenix GenAI is a Generative AI model service running on SkyNet, providing users powerful image, art, and video content creation capabilities via Telegram.</p><a href="https://genai-doc.phoenix.global/" target="_blank" data-v-fd98f2e6><span data-v-fd98f2e6>Use GenAI</span><img src="' +
-      ae +
-      '" data-v-fd98f2e6></a></div>',
+    cA +
+    '" data-v-fd98f2e6><div class="body" data-v-fd98f2e6><img class="logo genai" src="' +
+    lA +
+    '" data-v-fd98f2e6><p data-v-fd98f2e6>Phoenix GenAI is a Generative AI model service running on SkyNet, providing users powerful image, art, and video content creation capabilities via Telegram.</p><a href="https://genai-doc.phoenix.global/" target="_blank" data-v-fd98f2e6><span data-v-fd98f2e6>Use GenAI</span><img src="' +
+    ae +
+    '" data-v-fd98f2e6></a></div>',
     2
   ),
   _p = [vp],
   yp = { class: "item" },
   bp = q(
     '<img class="head" src="' +
-      dA +
-      '" data-v-fd98f2e6><div class="body" data-v-fd98f2e6><img class="logo" src="' +
-      fA +
-      '" style="height:26px;" data-v-fd98f2e6><p data-v-fd98f2e6> Hypermatrix is a state-of-the-art, institutional-grade AI trading strategy customizer and creation infrastructure, and represents the next phase of AlphaNet\u2019s AI technology development, powered by SkyNet. </p><a href="https://alphanet.phoenix.global/product?id=101" target="_blank" data-v-fd98f2e6><span data-v-fd98f2e6>Learn More</span><img src="' +
-      ae +
-      '" data-v-fd98f2e6></a></div>',
+    dA +
+    '" data-v-fd98f2e6><div class="body" data-v-fd98f2e6><img class="logo" src="' +
+    fA +
+    '" style="height:26px;" data-v-fd98f2e6><p data-v-fd98f2e6> Hypermatrix is a state-of-the-art, institutional-grade AI trading strategy customizer and creation infrastructure, and represents the next phase of AlphaNet\u2019s AI technology development, powered by SkyNet. </p><a href="https://alphanet.phoenix.global/product?id=101" target="_blank" data-v-fd98f2e6><span data-v-fd98f2e6>Learn More</span><img src="' +
+    ae +
+    '" data-v-fd98f2e6></a></div>',
     2
   ),
   wp = [bp],
   Cp = { class: "item" },
   Ip = q(
     '<img class="head" src="' +
-      uA +
-      '" data-v-fd98f2e6><div class="body" data-v-fd98f2e6><img class="logo" src="' +
-      AA +
-      '" style="height:32px;" data-v-fd98f2e6><p data-v-fd98f2e6> Bella Protocol is a DeFi yield optimizer live on zkSync, Mantle, Uniswap V3. Bella is leveraging AlphaNet and Hypermatrix to create AI-enhanced DeFi and yield optimization for users. </p><a href="https://www.bella.fi/" target="_blank" data-v-fd98f2e6><span data-v-fd98f2e6>Learn More</span><img src="' +
-      ae +
-      '" data-v-fd98f2e6></a></div>',
+    uA +
+    '" data-v-fd98f2e6><div class="body" data-v-fd98f2e6><img class="logo" src="' +
+    AA +
+    '" style="height:32px;" data-v-fd98f2e6><p data-v-fd98f2e6> Bella Protocol is a DeFi yield optimizer live on zkSync, Mantle, Uniswap V3. Bella is leveraging AlphaNet and Hypermatrix to create AI-enhanced DeFi and yield optimization for users. </p><a href="https://www.bella.fi/" target="_blank" data-v-fd98f2e6><span data-v-fd98f2e6>Learn More</span><img src="' +
+    ae +
+    '" data-v-fd98f2e6></a></div>',
     2
   ),
   xp = [Ip],
   Ep = { class: "item" },
   Bp = q(
     '<img class="head" src="' +
-      pA +
-      '" data-v-fd98f2e6><div class="body" data-v-fd98f2e6><img class="logo" src="' +
-      hA +
-      '" style="height:32px;" data-v-fd98f2e6><p style="font-size:15px;" data-v-fd98f2e6> Phoenix serves as a one-stop AI infrastructure and computing platform for Neo and projects within the Neo X ecosystem. Neo ecosystem will leverage SkyNet, AlphaNet, GenAI, and Hypermatrix. </p><a href="https://medium.com/neo-smart-economy/neo-partners-with-phoenix-to-drive-ai-enhanced-blockchain-adoption-for-the-neo-ecosystem-26f3d873362d" target="_blank" data-v-fd98f2e6><span data-v-fd98f2e6>View Release</span><img src="' +
-      ae +
-      '" data-v-fd98f2e6></a></div>',
+    pA +
+    '" data-v-fd98f2e6><div class="body" data-v-fd98f2e6><img class="logo" src="' +
+    hA +
+    '" style="height:32px;" data-v-fd98f2e6><p style="font-size:15px;" data-v-fd98f2e6> Phoenix serves as a one-stop AI infrastructure and computing platform for Neo and projects within the Neo X ecosystem. Neo ecosystem will leverage SkyNet, AlphaNet, GenAI, and Hypermatrix. </p><a href="https://medium.com/neo-smart-economy/neo-partners-with-phoenix-to-drive-ai-enhanced-blockchain-adoption-for-the-neo-ecosystem-26f3d873362d" target="_blank" data-v-fd98f2e6><span data-v-fd98f2e6>View Release</span><img src="' +
+    ae +
+    '" data-v-fd98f2e6></a></div>',
     2
   ),
   Sp = [Bp],
   Op = { class: "item" },
   Np = q(
     '<img class="head" src="' +
-      gA +
-      '" data-v-fd98f2e6><div class="body" data-v-fd98f2e6><img class="logo" src="' +
-      mA +
-      '" style="height:32px;" data-v-fd98f2e6><p data-v-fd98f2e6> Flamingo is Neo ecosystem&#39;s premier DEX, and will be integrating AlphaNet and Hypermatrix into its platform to enable AI-enhanced trading for its users. </p><a href="https://flamingo.finance/" target="_blank" data-v-fd98f2e6><span data-v-fd98f2e6>Learn More</span><img src="' +
-      ae +
-      '" data-v-fd98f2e6></a></div>',
+    gA +
+    '" data-v-fd98f2e6><div class="body" data-v-fd98f2e6><img class="logo" src="' +
+    mA +
+    '" style="height:32px;" data-v-fd98f2e6><p data-v-fd98f2e6> Flamingo is Neo ecosystem&#39;s premier DEX, and will be integrating AlphaNet and Hypermatrix into its platform to enable AI-enhanced trading for its users. </p><a href="https://flamingo.finance/" target="_blank" data-v-fd98f2e6><span data-v-fd98f2e6>Learn More</span><img src="' +
+    ae +
+    '" data-v-fd98f2e6></a></div>',
     2
   ),
   kp = [Np],
   Tp = { class: "item" },
   Pp = q(
     '<img class="head" src="' +
-      vA +
-      '" data-v-fd98f2e6><div class="body" data-v-fd98f2e6><img class="logo genai" src="' +
-      _A +
-      '" data-v-fd98f2e6><p data-v-fd98f2e6> LogX is an advanced orderbook perp DEX with AI trading agents &amp; intelligent risk management, gas-free trading creates for traders an unparalleled experience. </p><a href="https://www.logx.trade/" target="_blank" data-v-fd98f2e6><span data-v-fd98f2e6>Learn More</span><img src="' +
-      ae +
-      '" data-v-fd98f2e6></a></div>',
+    vA +
+    '" data-v-fd98f2e6><div class="body" data-v-fd98f2e6><img class="logo genai" src="' +
+    _A +
+    '" data-v-fd98f2e6><p data-v-fd98f2e6> LogX is an advanced orderbook perp DEX with AI trading agents &amp; intelligent risk management, gas-free trading creates for traders an unparalleled experience. </p><a href="https://www.logx.trade/" target="_blank" data-v-fd98f2e6><span data-v-fd98f2e6>Learn More</span><img src="' +
+    ae +
+    '" data-v-fd98f2e6></a></div>',
     2
   ),
   Lp = [Pp],
   jp = { class: "item" },
   Dp = q(
     '<img class="head" src="' +
-      yA +
-      '" data-v-fd98f2e6><div class="body" data-v-fd98f2e6><img class="logo" src="' +
-      bA +
-      '" style="height:32px;" data-v-fd98f2e6><p data-v-fd98f2e6> Algebra is a concentrated liquidity AMM protocol used by 20+ DEXes, AlphaNet will integrate Algebra DEX Engine to support Dexes such as Swapsicle, Kim, SpiritSwap, and more. </p><a href="https://algebra.finance/" target="_blank" data-v-fd98f2e6><span data-v-fd98f2e6>Learn More</span><img src="' +
-      ae +
-      '" data-v-fd98f2e6></a></div>',
+    yA +
+    '" data-v-fd98f2e6><div class="body" data-v-fd98f2e6><img class="logo" src="' +
+    bA +
+    '" style="height:32px;" data-v-fd98f2e6><p data-v-fd98f2e6> Algebra is a concentrated liquidity AMM protocol used by 20+ DEXes, AlphaNet will integrate Algebra DEX Engine to support Dexes such as Swapsicle, Kim, SpiritSwap, and more. </p><a href="https://algebra.finance/" target="_blank" data-v-fd98f2e6><span data-v-fd98f2e6>Learn More</span><img src="' +
+    ae +
+    '" data-v-fd98f2e6></a></div>',
     2
   ),
   Fp = [Dp],
   Rp = { class: "item" },
   Mp = q(
     '<img class="head" src="' +
-      wA +
-      '" data-v-fd98f2e6><div class="body" data-v-fd98f2e6><img class="logo" src="' +
-      CA +
-      '" style="height:32px;" data-v-fd98f2e6><p data-v-fd98f2e6> Ink Finance is a comprehensive DeFi asset management platform, it integrates with AlphaNet to deliver AI-enhanced treasury management and governance features. </p><a href="https://www.inkfinance.xyz/" target="_blank" data-v-fd98f2e6><span data-v-fd98f2e6>Learn More</span><img src="' +
-      ae +
-      '" data-v-fd98f2e6></a></div>',
+    wA +
+    '" data-v-fd98f2e6><div class="body" data-v-fd98f2e6><img class="logo" src="' +
+    CA +
+    '" style="height:32px;" data-v-fd98f2e6><p data-v-fd98f2e6> Ink Finance is a comprehensive DeFi asset management platform, it integrates with AlphaNet to deliver AI-enhanced treasury management and governance features. </p><a href="https://www.inkfinance.xyz/" target="_blank" data-v-fd98f2e6><span data-v-fd98f2e6>Learn More</span><img src="' +
+    ae +
+    '" data-v-fd98f2e6></a></div>',
     2
   ),
   Yp = [Mp],
   Hp = { class: "item" },
   Qp = q(
     '<img class="head" src="' +
-      IA +
-      '" data-v-fd98f2e6><div class="body" data-v-fd98f2e6><img class="logo" src="' +
-      xA +
-      '" style="height:32px;" data-v-fd98f2e6><p data-v-fd98f2e6> HorizonDEX is a high performing concentrated liquidity DEX on LineaBuild and Base. AlphaNet will introduce innovative AI trading products to enhance the trading experience for HorizonDEX users. </p><a href="https://app.horizondex.io/swap" target="_blank" data-v-fd98f2e6><span data-v-fd98f2e6>Learn More</span><img src="' +
-      ae +
-      '" data-v-fd98f2e6></a></div>',
+    IA +
+    '" data-v-fd98f2e6><div class="body" data-v-fd98f2e6><img class="logo" src="' +
+    xA +
+    '" style="height:32px;" data-v-fd98f2e6><p data-v-fd98f2e6> HorizonDEX is a high performing concentrated liquidity DEX on LineaBuild and Base. AlphaNet will introduce innovative AI trading products to enhance the trading experience for HorizonDEX users. </p><a href="https://app.horizondex.io/swap" target="_blank" data-v-fd98f2e6><span data-v-fd98f2e6>Learn More</span><img src="' +
+    ae +
+    '" data-v-fd98f2e6></a></div>',
     2
   ),
   Up = [Qp],
   Jp = { class: "item" },
   zp = q(
     '<img class="head" src="' +
-      EA +
-      '" data-v-fd98f2e6><div class="body" data-v-fd98f2e6><img class="logo" src="' +
-      BA +
-      '" style="height:32px;" data-v-fd98f2e6><p data-v-fd98f2e6> 0xGen is an intelligent DeFi trading execution platform and aggregator, and is to integrate with AlphaNet and Hypermatrix to create AI-enhanced DeFi. </p><a href="https://0xgen.io/" target="_blank" data-v-fd98f2e6><span data-v-fd98f2e6>Learn More</span><img src="' +
-      ae +
-      '" data-v-fd98f2e6></a></div>',
+    EA +
+    '" data-v-fd98f2e6><div class="body" data-v-fd98f2e6><img class="logo" src="' +
+    BA +
+    '" style="height:32px;" data-v-fd98f2e6><p data-v-fd98f2e6> 0xGen is an intelligent DeFi trading execution platform and aggregator, and is to integrate with AlphaNet and Hypermatrix to create AI-enhanced DeFi. </p><a href="https://0xgen.io/" target="_blank" data-v-fd98f2e6><span data-v-fd98f2e6>Learn More</span><img src="' +
+    ae +
+    '" data-v-fd98f2e6></a></div>',
     2
   ),
   Kp = [zp],
   Zp = { class: "item" },
   Wp = q(
     '<img class="head" src="' +
-      SA +
-      '" data-v-fd98f2e6><div class="body" data-v-fd98f2e6><img class="logo" src="' +
-      OA +
-      '" style="height:26px;" data-v-fd98f2e6><p data-v-fd98f2e6> Xade Finance is a multi-asset DeFi trading platform with omnichain liquidity and advanced analytics, and is to integrate with AlphaNet&#39;s AI signal and strategies. </p><a href="https://xade.finance/" target="_blank" data-v-fd98f2e6><span data-v-fd98f2e6>Learn More</span><img src="' +
-      ae +
-      '" data-v-fd98f2e6></a></div>',
+    SA +
+    '" data-v-fd98f2e6><div class="body" data-v-fd98f2e6><img class="logo" src="' +
+    OA +
+    '" style="height:26px;" data-v-fd98f2e6><p data-v-fd98f2e6> Xade Finance is a multi-asset DeFi trading platform with omnichain liquidity and advanced analytics, and is to integrate with AlphaNet&#39;s AI signal and strategies. </p><a href="https://xade.finance/" target="_blank" data-v-fd98f2e6><span data-v-fd98f2e6>Learn More</span><img src="' +
+    ae +
+    '" data-v-fd98f2e6></a></div>',
     2
   ),
   Vp = [Wp],
   Gp = { class: "item" },
   Xp = q(
     '<img class="head" src="' +
-      NA +
-      '" data-v-fd98f2e6><div class="body" data-v-fd98f2e6><img class="logo" src="' +
-      kA +
-      '" style="height:38px;" data-v-fd98f2e6><p data-v-fd98f2e6> Hippocrat is a healthcare data DeSci (Decentralized Science) project, and has partnered with Phoenix to leverage SkyNet for building a custom LLM and AI models for analytics. </p><a href="https://hippocrat.io/" target="_blank" data-v-fd98f2e6><span data-v-fd98f2e6>Learn More</span><img src="' +
-      ae +
-      '" data-v-fd98f2e6></a></div>',
+    NA +
+    '" data-v-fd98f2e6><div class="body" data-v-fd98f2e6><img class="logo" src="' +
+    kA +
+    '" style="height:38px;" data-v-fd98f2e6><p data-v-fd98f2e6> Hippocrat is a healthcare data DeSci (Decentralized Science) project, and has partnered with Phoenix to leverage SkyNet for building a custom LLM and AI models for analytics. </p><a href="https://hippocrat.io/" target="_blank" data-v-fd98f2e6><span data-v-fd98f2e6>Learn More</span><img src="' +
+    ae +
+    '" data-v-fd98f2e6></a></div>',
     2
   ),
   qp = [Xp],
   $p = { class: "item" },
   eh = q(
     '<img class="head" src="' +
-      TA +
-      '" data-v-fd98f2e6><div class="body" data-v-fd98f2e6><img class="logo" src="' +
-      PA +
-      '" style="height:32px;" data-v-fd98f2e6><p data-v-fd98f2e6> Sypool is a DeFi asset management platform, offering tokenized fund shares and quantitative trading products. Sypool has partnered with AlphaNet to provide enhanced AI capabilities for its users. </p><a href="https://sypool.io/" target="_blank" data-v-fd98f2e6><span data-v-fd98f2e6>Learn More</span><img src="' +
-      ae +
-      '" data-v-fd98f2e6></a></div>',
+    TA +
+    '" data-v-fd98f2e6><div class="body" data-v-fd98f2e6><img class="logo" src="' +
+    PA +
+    '" style="height:32px;" data-v-fd98f2e6><p data-v-fd98f2e6> Sypool is a DeFi asset management platform, offering tokenized fund shares and quantitative trading products. Sypool has partnered with AlphaNet to provide enhanced AI capabilities for its users. </p><a href="https://sypool.io/" target="_blank" data-v-fd98f2e6><span data-v-fd98f2e6>Learn More</span><img src="' +
+    ae +
+    '" data-v-fd98f2e6></a></div>',
     2
   ),
   th = [eh],
   sh = { class: "item" },
   nh = q(
     '<img class="head" src="' +
-      LA +
-      '" data-v-fd98f2e6><div class="body" data-v-fd98f2e6><img class="logo" src="' +
-      jA +
-      '" style="height:32px;" data-v-fd98f2e6><p data-v-fd98f2e6> GameSwift is a platform leveraging computing power and AI to revolutionize gaming, and is partnered with Phoenix SkyNet to further enhance scalability and AI features of its network. </p><a href="https://gameswift.io/" target="_blank" data-v-fd98f2e6><span data-v-fd98f2e6>Learn More</span><img src="' +
-      ae +
-      '" data-v-fd98f2e6></a></div>',
+    LA +
+    '" data-v-fd98f2e6><div class="body" data-v-fd98f2e6><img class="logo" src="' +
+    jA +
+    '" style="height:32px;" data-v-fd98f2e6><p data-v-fd98f2e6> GameSwift is a platform leveraging computing power and AI to revolutionize gaming, and is partnered with Phoenix SkyNet to further enhance scalability and AI features of its network. </p><a href="https://gameswift.io/" target="_blank" data-v-fd98f2e6><span data-v-fd98f2e6>Learn More</span><img src="' +
+    ae +
+    '" data-v-fd98f2e6></a></div>',
     2
   ),
   oh = [nh],
   ih = { class: "item" },
   ah = q(
     '<img class="head" src="' +
-      DA +
-      '" data-v-fd98f2e6><div class="body" data-v-fd98f2e6><img class="logo" src="' +
-      FA +
-      '" style="height:32px;" data-v-fd98f2e6><p data-v-fd98f2e6> Tripo is the leading AI-to-3D technology platform and is the first 3rd party AI model to be integrated into SkyNet AI Marketplace. </p><a href="https://www.tripo3d.ai/" target="_blank" data-v-fd98f2e6><span data-v-fd98f2e6>Learn More</span><img src="' +
-      ae +
-      '" data-v-fd98f2e6></a></div>',
+    DA +
+    '" data-v-fd98f2e6><div class="body" data-v-fd98f2e6><img class="logo" src="' +
+    FA +
+    '" style="height:32px;" data-v-fd98f2e6><p data-v-fd98f2e6> Tripo is the leading AI-to-3D technology platform and is the first 3rd party AI model to be integrated into SkyNet AI Marketplace. </p><a href="https://www.tripo3d.ai/" target="_blank" data-v-fd98f2e6><span data-v-fd98f2e6>Learn More</span><img src="' +
+    ae +
+    '" data-v-fd98f2e6></a></div>',
     2
   ),
   rh = [ah],
   ch = { class: "item" },
   lh = q(
     '<img class="head" src="' +
-      RA +
-      '" data-v-fd98f2e6><div class="body" data-v-fd98f2e6><img class="logo" src="' +
-      MA +
-      '" style="height:32px;" data-v-fd98f2e6><p data-v-fd98f2e6> Meta2150s is a Web 3 gaming platform and aggregator and utilizes AI-to-3D capabilities through SkyNet AI Marketplace for game asset and NFT creation. </p><a href="https://meta2150s.com/" target="_blank" data-v-fd98f2e6><span data-v-fd98f2e6>Learn More</span><img src="' +
-      ae +
-      '" data-v-fd98f2e6></a></div>',
+    RA +
+    '" data-v-fd98f2e6><div class="body" data-v-fd98f2e6><img class="logo" src="' +
+    MA +
+    '" style="height:32px;" data-v-fd98f2e6><p data-v-fd98f2e6> Meta2150s is a Web 3 gaming platform and aggregator and utilizes AI-to-3D capabilities through SkyNet AI Marketplace for game asset and NFT creation. </p><a href="https://meta2150s.com/" target="_blank" data-v-fd98f2e6><span data-v-fd98f2e6>Learn More</span><img src="' +
+    ae +
+    '" data-v-fd98f2e6></a></div>',
     2
   ),
   dh = [lh],
   fh = { class: "item" },
   uh = q(
     '<img class="head" src="' +
-      YA +
-      '" data-v-fd98f2e6><div class="body" data-v-fd98f2e6><img class="logo" src="' +
-      HA +
-      '" style="height:32px;" data-v-fd98f2e6><p data-v-fd98f2e6> Miracle Play is an online e-sports tournament platform, and will utilize Phoenix&#39;s custom LLM and AI-to-3D to create engaging 3D assets for gaming events. </p><a href="https://miracleplay.gg/" target="_blank" data-v-fd98f2e6><span data-v-fd98f2e6>Learn More</span><img src="' +
-      ae +
-      '" data-v-fd98f2e6></a></div>',
+    YA +
+    '" data-v-fd98f2e6><div class="body" data-v-fd98f2e6><img class="logo" src="' +
+    HA +
+    '" style="height:32px;" data-v-fd98f2e6><p data-v-fd98f2e6> Miracle Play is an online e-sports tournament platform, and will utilize Phoenix&#39;s custom LLM and AI-to-3D to create engaging 3D assets for gaming events. </p><a href="https://miracleplay.gg/" target="_blank" data-v-fd98f2e6><span data-v-fd98f2e6>Learn More</span><img src="' +
+    ae +
+    '" data-v-fd98f2e6></a></div>',
     2
   ),
   Ah = [uh],
   ph = { class: "item" },
   hh = q(
     '<img class="head" src="' +
-      QA +
-      '" data-v-fd98f2e6><div class="body" data-v-fd98f2e6><img class="logo" src="' +
-      UA +
-      '" style="height:32px;" data-v-fd98f2e6><p data-v-fd98f2e6> Tilted is a leading platform for gaming asset management and liquidity. Users on Tilted platform can leverage Phoenix GenAI and AI-to-3D tool for in-game and NFT assets creation. </p><a href="https://tilted.xyz/" target="_blank" data-v-fd98f2e6><span data-v-fd98f2e6>Learn More</span><img src="' +
-      ae +
-      '" data-v-fd98f2e6></a></div>',
+    QA +
+    '" data-v-fd98f2e6><div class="body" data-v-fd98f2e6><img class="logo" src="' +
+    UA +
+    '" style="height:32px;" data-v-fd98f2e6><p data-v-fd98f2e6> Tilted is a leading platform for gaming asset management and liquidity. Users on Tilted platform can leverage Phoenix GenAI and AI-to-3D tool for in-game and NFT assets creation. </p><a href="https://tilted.xyz/" target="_blank" data-v-fd98f2e6><span data-v-fd98f2e6>Learn More</span><img src="' +
+    ae +
+    '" data-v-fd98f2e6></a></div>',
     2
   ),
   gh = [hh],
   mh = { class: "item" },
   vh = q(
     '<img class="head" src="' +
-      JA +
-      '" data-v-fd98f2e6><div class="body" data-v-fd98f2e6><img class="logo" src="' +
-      zA +
-      '" style="height:32px;" data-v-fd98f2e6><p data-v-fd98f2e6> SuperB is a next-gen social gaming platform incubated by leading Korean game studio EVR Studio. Phoenix will provide AI Elastic Compute Layer, SkyNet, to power SuperB\u2019s metaverse. </p><a href="https://super-b.io/" target="_blank" data-v-fd98f2e6><span data-v-fd98f2e6>Learn More</span><img src="' +
-      ae +
-      '" data-v-fd98f2e6></a></div>',
+    JA +
+    '" data-v-fd98f2e6><div class="body" data-v-fd98f2e6><img class="logo" src="' +
+    zA +
+    '" style="height:32px;" data-v-fd98f2e6><p data-v-fd98f2e6> SuperB is a next-gen social gaming platform incubated by leading Korean game studio EVR Studio. Phoenix will provide AI Elastic Compute Layer, SkyNet, to power SuperB\u2019s metaverse. </p><a href="https://super-b.io/" target="_blank" data-v-fd98f2e6><span data-v-fd98f2e6>Learn More</span><img src="' +
+    ae +
+    '" data-v-fd98f2e6></a></div>',
     2
   ),
   _h = [vh],
   yh = { class: "item" },
   bh = q(
     '<img class="head" src="' +
-      KA +
-      '" data-v-fd98f2e6><div class="body" data-v-fd98f2e6><img class="logo" src="' +
-      ZA +
-      '" style="height:32px;" data-v-fd98f2e6><p data-v-fd98f2e6> Crust Network is a cross-chain storage solution that supports various IPFS, PoS, and PoW protocols.Crust will be integrated into Phoenix AI Ecosystem as the first storage-focused partner. </p><a href="https://crust.network/" target="_blank" data-v-fd98f2e6><span data-v-fd98f2e6>Learn More</span><img src="' +
-      ae +
-      '" data-v-fd98f2e6></a></div>',
+    KA +
+    '" data-v-fd98f2e6><div class="body" data-v-fd98f2e6><img class="logo" src="' +
+    ZA +
+    '" style="height:32px;" data-v-fd98f2e6><p data-v-fd98f2e6> Crust Network is a cross-chain storage solution that supports various IPFS, PoS, and PoW protocols.Crust will be integrated into Phoenix AI Ecosystem as the first storage-focused partner. </p><a href="https://crust.network/" target="_blank" data-v-fd98f2e6><span data-v-fd98f2e6>Learn More</span><img src="' +
+    ae +
+    '" data-v-fd98f2e6></a></div>',
     2
   ),
   wh = [bh],
   Ch = { class: "item" },
   Ih = q(
     '<img class="head" src="' +
-      WA +
-      '" data-v-fd98f2e6><div class="body" data-v-fd98f2e6><img class="logo" src="' +
-      VA +
-      '" style="height:28px;" data-v-fd98f2e6><p data-v-fd98f2e6> ARPA is a decentralized secure computation network, ARPA will combine its ZK rollup-based ML/AI capabilities with Phoenix\u2019s robust AI infrastructure. </p><a href="https://www.arpanetwork.io/en-US" target="_blank" data-v-fd98f2e6><span data-v-fd98f2e6>Learn More</span><img src="' +
-      ae +
-      '" data-v-fd98f2e6></a></div>',
+    WA +
+    '" data-v-fd98f2e6><div class="body" data-v-fd98f2e6><img class="logo" src="' +
+    VA +
+    '" style="height:28px;" data-v-fd98f2e6><p data-v-fd98f2e6> ARPA is a decentralized secure computation network, ARPA will combine its ZK rollup-based ML/AI capabilities with Phoenix\u2019s robust AI infrastructure. </p><a href="https://www.arpanetwork.io/en-US" target="_blank" data-v-fd98f2e6><span data-v-fd98f2e6>Learn More</span><img src="' +
+    ae +
+    '" data-v-fd98f2e6></a></div>',
     2
   ),
   xh = [Ih],
   Eh = { class: "item" },
   Bh = q(
     '<img class="head" src="' +
-      GA +
-      '" data-v-fd98f2e6><div class="body" data-v-fd98f2e6><img class="logo" src="' +
-      XA +
-      '" style="height:33px;" data-v-fd98f2e6><p data-v-fd98f2e6> WOW EARN is an all-in-one Web 3 app platform, it will integrate with Phoenix\u2019s cutting-edge AI technology to empower users with advanced AI capabilities. </p><a href="https://wowearn.com/" target="_blank" data-v-fd98f2e6><span data-v-fd98f2e6>Learn More</span><img src="' +
-      ae +
-      '" data-v-fd98f2e6></a></div>',
+    GA +
+    '" data-v-fd98f2e6><div class="body" data-v-fd98f2e6><img class="logo" src="' +
+    XA +
+    '" style="height:33px;" data-v-fd98f2e6><p data-v-fd98f2e6> WOW EARN is an all-in-one Web 3 app platform, it will integrate with Phoenix\u2019s cutting-edge AI technology to empower users with advanced AI capabilities. </p><a href="https://wowearn.com/" target="_blank" data-v-fd98f2e6><span data-v-fd98f2e6>Learn More</span><img src="' +
+    ae +
+    '" data-v-fd98f2e6></a></div>',
     2
   ),
   Sh = [Bh],
   Oh = { class: "item" },
   Nh = q(
     '<img class="head" src="' +
-      qA +
-      '" data-v-fd98f2e6><div class="body" data-v-fd98f2e6><img class="logo" src="' +
-      $A +
-      '" style="height:28px;" data-v-fd98f2e6><p data-v-fd98f2e6> APRO Oracle is a decentralized oracle network specifically for the Bitcoin ecosystem, it will integrate with AlphaNet and Hypermatrix to develop oracle-verified AI trading agents. </p><a href="https://www.apro.com/" target="_blank" data-v-fd98f2e6><span data-v-fd98f2e6>Learn More</span><img src="' +
-      ae +
-      '" data-v-fd98f2e6></a></div>',
+    qA +
+    '" data-v-fd98f2e6><div class="body" data-v-fd98f2e6><img class="logo" src="' +
+    $A +
+    '" style="height:28px;" data-v-fd98f2e6><p data-v-fd98f2e6> APRO Oracle is a decentralized oracle network specifically for the Bitcoin ecosystem, it will integrate with AlphaNet and Hypermatrix to develop oracle-verified AI trading agents. </p><a href="https://www.apro.com/" target="_blank" data-v-fd98f2e6><span data-v-fd98f2e6>Learn More</span><img src="' +
+    ae +
+    '" data-v-fd98f2e6></a></div>',
     2
   ),
   kh = [Nh],
@@ -6931,7 +6923,7 @@ const oo = (e) => (Be("data-v-82c250a9"), (e = e()), Se(), e),
     __name: "index",
     setup(e) {
       const t = [
-       
+
       ];
       return (s, n) => (
         h(),
@@ -6941,41 +6933,41 @@ const oo = (e) => (Be("data-v-82c250a9"), (e = e()), Se(), e),
               Kh,
               A("div", Zh, [
                 (h(),
-                v(
-                  ue,
-                  null,
-                  bt(t, (o, i) =>
-                    x(
-                      A("div", { class: "item", key: o.img }, [
-                        A(
-                          "img",
-                          { src: o.img, class: be({ darken: o.darken_head }) },
-                          null,
-                          10,
-                          Wh
-                        ),
-                        A("div", Vh, [
+                  v(
+                    ue,
+                    null,
+                    bt(t, (o, i) =>
+                      x(
+                        A("div", { class: "item", key: o.img }, [
                           A(
-                            "p",
-                            { class: be({ "sm-font": o.small_font }) },
-                            Ie(o.text),
-                            3
+                            "img",
+                            { src: o.img, class: be({ darken: o.darken_head }) },
+                            null,
+                            10,
+                            Wh
                           ),
-                          A(
-                            "a",
-                            { href: o.link, target: "_blank" },
-                            [Xh, B(no)],
-                            8,
-                            Gh
-                          ),
+                          A("div", Vh, [
+                            A(
+                              "p",
+                              { class: be({ "sm-font": o.small_font }) },
+                              Ie(o.text),
+                              3
+                            ),
+                            A(
+                              "a",
+                              { href: o.link, target: "_blank" },
+                              [Xh, B(no)],
+                              8,
+                              Gh
+                            ),
+                          ]),
+                          qh,
                         ]),
-                        qh,
-                      ]),
-                      [[T(K), i * 200]]
-                    )
-                  ),
-                  64
-                )),
+                        [[T(K), i * 200]]
+                      )
+                    ),
+                    64
+                  )),
               ]),
             ]),
           ]),
@@ -6986,20 +6978,20 @@ const oo = (e) => (Be("data-v-82c250a9"), (e = e()), Se(), e),
   eg = ce($h, [["__scopeId", "data-v-82c250a9"]]),
   qo =
     "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJAAAACQCAMAAADQmBKKAAAAAXNSR0IArs4c6QAAAhBQTFRFAAAA////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////YKLGdAAAAK90Uk5TAAECAwQFBggJCgwOEBESExQWGBkaHB0eHyAjJCUmJyssLS4vMjQ1ODk6Oz0+P0FCREZHSElLTE1OUlNWV1hZWl1eX2NkZWZnaWprbG5vdHV2d3p7f4CBgoOEhoiLjI2OkpSZmpydoqOlp6ipq6ytr7CxtLW2uLm6u7y+v8HExcbHyMnKy83O0dLT1tfZ2tzd3t/g4eLk5ebn6Onq6+zt7u/w8fL09fb3+Pn6+/z9/nGsTakAAAa4SURBVHja7Vz/Qxs1FE+7lm8CN5hU65dNdGhLRQGHCBtfVCgqDvyCmwiolTKdVp1Y8AuuUKZYmTqroEMpTnQbyGj/RfHe3ZW7XXtJLin5oe/HNHn3afKSvPd5SRAqSlGKIrLUBPrGIzOxRDK1vZ1KJmIzkfG+QM3BYKntnoxfy5jKtfhkd21BwVR3hJYzFrIc6qguDJqyruitDJbcinaV8UbjaJrazBDI5lSTgyOc0sFkhliSg6Wc4FQMrxk/djMRGe1t9dd7pZISyVvvb+0djSRuGmutDVdwgFM1smG02k6v06ym09tptPmNkSrGcJxBHZz1cI/FvD7SE17XQQo6WeI5vrhP91ak3Y3TyN0e2drXbPE4MziVod2s3ksDlQQtBy5lW+6GKtngObHPlueaSVs3z+2z7hMM4LjG0prCaCONhsaopiA95rKLp+6ipi3eQKukIa4puVhnD09bSpsm/TaWXEe/NklTbXbwDKvDlQ5L9v7Z4bCmapj+f02of2slYN8YAyuqtgnKvnadUzVMSyxmqzSt6jtHZdrl6uTYGWK0YTuGdtTpWk6BJ6Y0XvWxW/F9q4rSGDEil9o/yx6We5BH3XWjhKPmUO1nQUJMRVpQ7YjMDiZsDDamaU4QrT9Ko/MuxFxc5xXlBOtRW5puoMnMM429Ztcp+8VCOeIi5YodpTD3NZeyny5LiJNIyly7iDcCY8r640HcxKOsR2NY/hgY0M4jPOM7H6zZaQyPrVLxD4f4RpxDig9p7dWGlP3UwReQQ9lpQ5bxBfjzKxLiLBJ4I7sWsYgT4p10AHGXANjqYv54bQA6MlwIGiUM3wrmjZfB9U1JhQAkwcc28kXZIwC6vzBMUz98bSQPvwGY41gzzPlU5MrmlQ9tBBEOiI42Kqw2eaz4y/OVGls/RI2owWLbL4U1MYqj686rWuy3/cohWkSw76/lYrQG4QN+nN5e2M+1xI9SAmqE9oM5PgJ83RyWx6QnpG6cplzYgYlImrduAuVY/MYFI203dzcVoGZo3WT64xTYKJaiH+W6r1X3/6Ui+vtZKkTAH02Z/VS2ab1wagLew54x3vW51knTRygAwdawacZndwFfh8dyAQTZ8gavawTJKQp2Dli/rpxTMIIIASF0X0zrpA/I95xIrqWmGvIF7eSA0KGXt1VEV58kBdQOWYjb8yIdwPe6KQAh9MCS1klTd5ABcgN73JHDU8T1OwyAkPt1ldjI/PI4jRdyu+cIkUkPJSCEHr6sMZtvE+WAeiDmMhbXgrJaakCo9C2Nzf6eJGLJ8eVuc5wEgBB69CctU/ZGCT4iGJtuQ+kkXgyQFxCqeEez7W/xnRKw3klDKfhKnfYAIfTEryqif1/FdUo6wWMwlEI+12sXEKp6j9gp8ULmWF9YA/k4p21Ae394ndApcULGT59dD8hlCcQAEKrJ+iZzWF2ekOvqQ8E+ko3MAhBCz2Sdkj7s7Uxfc1wuG2UECNV9pnXSp9ZOyahccdwEZC8rQMjx/D+aU3LSSlmvyfDMymUtzAAhdE82r3XWQlmLXGtWVzYvl/kYAkLOYS3jejq/Mr9caV5X9p1cVs8SEELHvlHT+/kjgHqTKZ4kWxfxACH3mR2cQYOVMakrAyJYYgxoL1j+Qa64lJ8GAcpFVwY+aAlzQOioXPHPvHVKICIXG5BwQ8bHqF0j1Ead4DLtl+infQybiMFfGIfIFsaYrmxGLms9mK2jVa41w3VzRc9dx99cnzbZXPm5H9N07gdbB63XvoPG1IX9mJBXM3NhWTr5f7Bw8tmFQe+yCYPYB4rbNgNF4UJp4cgGBnTMm0zpGPuE1TJbwsoupXdWo/R+fowNpScc6WmDFna+tMWBFqYnzu/NEufvMyTOqVMLL/BKLRAlX2B892aT54uso0FzdSJP8oUoPfWbXPfMYZ7pKaIE3ifGBN6XHBJ4JCnOU4YU54s8UpxESeCvdUng++ngWCSBidLk3t8LkCYnOkjgVfto8UFaOJYHCciOWjhOXli9cfmjVmo4GEcthDuMoh7X2RDmuA4KCnagSbwjX8IdihPv2KB4Byu1o6c+nngIjp6KdzhXvOPLwh3wFu8IvHiXBMS7RiHeRRPhruKId1lJvOtc4l14E+9KIGJ5aVJicWkSiXetVLyLt4aryX4aDX6mV5ORcJe3kfF6e5DkenuQx/V2JNwDAP/HawOETyTU8n0iAQn3iITMjeR4ZqPFpz6z4Wsp4DMbMqMl1kMk8pIr1lMtsoj1mA2IWM/9qPNapAeRNJGfjJqdV5+Mmp89wCejilKUomDKf2bwvY05OSCqAAAAAElFTkSuQmCC",
-//   tg = "/assets/skynet_tutorial.d0982486.mp4",
+  //   tg = "/assets/skynet_tutorial.d0982486.mp4",
   sg = "/assets/bg.d4d0b36b.png",
   ng = "/assets/play-hover.7ee0ebc3.png";
 const Da = (e) => (Be("data-v-adf4c303"), (e = e()), Se(), e),
   og = { key: 0, class: "block" },
   ig = Da(() => A("div", { class: "row1" }, "", -1)),
-//   ag = Da(() =>
-//     A(
-//       "div",
-//       { class: "row2" },
-//       "See how to train, deploy, and perform inference for a deep neural network for image recognition with on the fly with zero programming required.",
-//       -1
-//     )
-//   ),
+  //   ag = Da(() =>
+  //     A(
+  //       "div",
+  //       { class: "row2" },
+  //       "See how to train, deploy, and perform inference for a deep neural network for image recognition with on the fly with zero programming required.",
+  //       -1
+  //     )
+  //   ),
   rg = {
     __name: "index",
     setup(e) {
@@ -7088,20 +7080,20 @@ const io = (e) => (Be("data-v-bc1f2af9"), (e = e()), Se(), e),
             [
               ug,
               (h(!0),
-              v(
-                ue,
-                null,
-                bt(
-                  t.ul,
-                  (o) => (
-                    h(),
-                    v("ul", { key: o }, [
-                      A("li", null, [Ag, A("span", null, Ie(o), 1)]),
-                    ])
-                  )
-                ),
-                128
-              )),
+                v(
+                  ue,
+                  null,
+                  bt(
+                    t.ul,
+                    (o) => (
+                      h(),
+                      v("ul", { key: o }, [
+                        A("li", null, [Ag, A("span", null, Ie(o), 1)]),
+                      ])
+                    )
+                  ),
+                  128
+                )),
             ],
             4
           ),
@@ -7148,81 +7140,81 @@ const bg = (e) => (Be("data-v-ca2b45b7"), (e = e()), Se(), e),
             A("div", xg, [
               x(
                 (h(),
-                v("div", Eg, [
-                  x(
+                  v("div", Eg, [
+                    x(
+                      B(
+                        Bs,
+                        {
+                          logo: T(mg),
+                          introduction: `Leading China-based, enterprise data
+              & AI company backed by Tencent and
+              Anker Innovation, headquartered in Hong Kong and Shanghai.`,
+                          ul: [
+                            "Layer 1 Enterprise Blockchain, Enterprise Partner Ecosystem",
+                          ],
+                          site: "",
+                          role_label_margin: "40px",
+                        },
+                        null,
+                        8,
+                        ["logo"]
+                      ),
+                      [[T(K)]]
+                    ),
                     B(
                       Bs,
                       {
-                        logo: T(mg),
-                        introduction: `Leading China-based, enterprise data
-              & AI company backed by Tencent and
-              Anker Innovation, headquartered in Hong Kong and Shanghai.`,
+                        logo: T(vg),
+                        introduction: `Decentralized AI research organization headquartered in Hong
+              Kong, focused on federated learning, decentralized edge computing, multi
+              party computation.`,
                         ul: [
-                          "Layer 1 Enterprise Blockchain, Enterprise Partner Ecosystem",
+                          "SkyNet, AI On-Demand, AI App Ecosystem Development",
                         ],
-                        site: "",
+                        site: "https://flc.ai/",
+                        role_label_margin: "32px",
+                      },
+                      null,
+                      8,
+                      ["logo"]
+                    ),
+                  ])),
+                [[T(K), 200]]
+              ),
+              x(
+                (h(),
+                  v("div", Bg, [
+                    B(
+                      Bs,
+                      {
+                        logo: T(_g),
+                        introduction: `AI-driven proprietary trading firm focused on emerging asset classes,
+              asia-based with offices in Shanghai, Hong Kong, Beijing, and Melbourne.`,
+                        ul: [
+                          "SkyNet, AlphaNet, AI Compute Resources, Proprietary AI Models",
+                        ],
+                        site: "https://www.tensorcorp.com/",
                         role_label_margin: "40px",
                       },
                       null,
                       8,
                       ["logo"]
                     ),
-                    [[T(K)]]
-                  ),
-                  B(
-                    Bs,
-                    {
-                      logo: T(vg),
-                      introduction: `Decentralized AI research organization headquartered in Hong
-              Kong, focused on federated learning, decentralized edge computing, multi
-              party computation.`,
-                      ul: [
-                        "SkyNet, AI On-Demand, AI App Ecosystem Development",
-                      ],
-                      site: "https://flc.ai/",
-                      role_label_margin: "32px",
-                    },
-                    null,
-                    8,
-                    ["logo"]
-                  ),
-                ])),
-                [[T(K), 200]]
-              ),
-              x(
-                (h(),
-                v("div", Bg, [
-                  B(
-                    Bs,
-                    {
-                      logo: T(_g),
-                      introduction: `AI-driven proprietary trading firm focused on emerging asset classes,
-              asia-based with offices in Shanghai, Hong Kong, Beijing, and Melbourne.`,
-                      ul: [
-                        "SkyNet, AlphaNet, AI Compute Resources, Proprietary AI Models",
-                      ],
-                      site: "https://www.tensorcorp.com/",
-                      role_label_margin: "40px",
-                    },
-                    null,
-                    8,
-                    ["logo"]
-                  ),
-                  B(
-                    Bs,
-                    {
-                      logo: T(yg),
-                      introduction: `Bobber.com is a leading DePIN hardware company, and is Helium's
+                    B(
+                      Bs,
+                      {
+                        logo: T(yg),
+                        introduction: `Bobber.com is a leading DePIN hardware company, and is Helium's
               largest hardware provider, with over 400,000 devices shipped. A JDI Group company.`,
-                      ul: ["Proprietary Compute Infrastructure and Hardware"],
-                      site: "https://bobber.com/",
-                      role_label_margin: "32px",
-                    },
-                    null,
-                    8,
-                    ["logo"]
-                  ),
-                ])),
+                        ul: ["Proprietary Compute Infrastructure and Hardware"],
+                        site: "https://bobber.com/",
+                        role_label_margin: "32px",
+                      },
+                      null,
+                      8,
+                      ["logo"]
+                    ),
+                  ])),
                 [[T(K), 400]]
               ),
             ]),
@@ -7245,9 +7237,9 @@ const bg = (e) => (Be("data-v-ca2b45b7"), (e = e()), Se(), e),
         h(),
         v("div", Ng, [
           (h(),
-          v("svg", kg, [
-            A("image", { class: "industryItem-img", href: e.img }, null, 8, Tg),
-          ])),
+            v("svg", kg, [
+              A("image", { class: "industryItem-img", href: e.img }, null, 8, Tg),
+            ])),
           A("h5", Pg, Ie(e.title), 1),
           A("div", Lg, Ie(e.desc), 1),
         ])
@@ -7398,11 +7390,11 @@ const um = {},
     A("h2", { class: "investorsPartners-title" }, "", -1)
   ),
   hm = { class: "investorsPartners-items" },
-//   gm = {
-//     class: "investorsPartners-item",
-//     href: "https://accounts.binance.com/en/register?ref=COH4OPCC",
-//     target: "_blank",
-//   },
+  //   gm = {
+  //     class: "investorsPartners-item",
+  //     href: "https://accounts.binance.com/en/register?ref=COH4OPCC",
+  //     target: "_blank",
+  //   },
   mm = qt(() => A("img", { src: Wg }, null, -1)),
   vm = [mm],
   _m = {
@@ -7490,9 +7482,9 @@ function Gm(e, t) {
   return h(), v("div", Zm, Vm);
 }
 const Xm = ce(Km, [
-    ["render", Gm],
-    ["__scopeId", "data-v-c9d280fd"],
-  ]),
+  ["render", Gm],
+  ["__scopeId", "data-v-c9d280fd"],
+]),
   $o = (e) => e ** 3,
   qm = (e) => (e < 0.5 ? $o(e * 2) / 2 : 1 - $o((1 - e) * 2) / 2),
   $m = (e) => {
@@ -7554,8 +7546,8 @@ const nv = {},
   ov = { class: "block-container" },
   iv = q(
     '<div class="bg_container" data-v-ef88e7df></div><div class="vision block" data-v-ef88e7df><h2 data-v-ef88e7df>Vision</h2><div class="main" data-v-ef88e7df><div class="item1" data-v-ef88e7df><h3 data-v-ef88e7df>The Skynet Trifecta</h3><p data-v-ef88e7df> The Skynet Trifecta is our vision of how value is delivered by Skynet using decentralized AI technology. The Trifecta focuses on using our decentralized AI infrastructure to empower use cases with substantial real-world value.</p></div><div class="item2" data-v-ef88e7df><h4 data-v-ef88e7df>AI Alpha</h4><p data-v-ef88e7df> Unleashing the power of AI for alpha generation, or creating profit for users, as in the case of AlphaNet. </p></div><div class="item3" data-v-ef88e7df><h4 data-v-ef88e7df>AI Insights</h4><p data-v-ef88e7df> Make predictive AI insights accessible, scalable, and easy to utilize, via SkyNet\u2019s AI model service. </p></div><div class="item4" data-v-ef88e7df><h4 data-v-ef88e7df>AI Productivity</h4><p data-v-ef88e7df> Leverage AI to change the way you work, research, and learn, through technology such as SkynetLLM. </p></div><img class="logo" src="' +
-      sv +
-      '" data-v-ef88e7df></div></div>',
+    sv +
+    '" data-v-ef88e7df></div></div>',
     2
   ),
   av = [iv];
@@ -7563,9 +7555,9 @@ function rv(e, t) {
   return h(), v("div", ov, av);
 }
 const cv = ce(nv, [
-    ["render", rv],
-    ["__scopeId", "data-v-ef88e7df"],
-  ]),
+  ["render", rv],
+  ["__scopeId", "data-v-ef88e7df"],
+]),
   lv = "";
 const dv = {},
   ao = (e) => (Be("data-v-7394209d"), (e = e()), Se(), e),
@@ -7591,9 +7583,9 @@ function gv(e, t) {
   );
 }
 const mv = ce(dv, [
-    ["render", gv],
-    ["__scopeId", "data-v-7394209d"],
-  ]),
+  ["render", gv],
+  ["__scopeId", "data-v-7394209d"],
+]),
   vv = { class: "phoenixHome" },
   _v = ve({
     __name: "App",
@@ -7641,8 +7633,8 @@ const mv = ce(dv, [
     },
   });
 const Fa = function () {
-    return document.ontouchstart !== null ? "click" : "touchstart";
-  },
+  return document.ontouchstart !== null ? "click" : "touchstart";
+},
   Hs = "__vue_click_away__",
   Ra = function (e, t, s) {
     Ma(e);
@@ -7688,7 +7680,7 @@ function Iv() {
           : (e.style.transition = o),
         Dt == null || Dt.observe(e);
     },
-    updated(e, t) {},
+    updated(e, t) { },
   };
 }
 function xv(e) {
@@ -7730,21 +7722,21 @@ const Ev = { key: 0, class: "svgIcon" },
           ? (h(),
             v("i", Ev, [
               (h(),
-              v(
-                "svg",
-                { style: ft(T(s)), "aria-hidden": "true" },
-                [A("use", { "xlink:href": "#icon-" + e.icon }, null, 8, Bv)],
-                4
-              )),
+                v(
+                  "svg",
+                  { style: ft(T(s)), "aria-hidden": "true" },
+                  [A("use", { "xlink:href": "#icon-" + e.icon }, null, 8, Bv)],
+                  4
+                )),
             ]))
           : st("", !0);
     },
   });
 const Ov = {
-    install: (e) => {
-      e.component("SvgIcon", Sv);
-    },
+  install: (e) => {
+    e.component("SvgIcon", Sv);
   },
+},
   ys = la(_v);
 ys.use(_d, {
   transition: "Vue-Toastification__bounce",
