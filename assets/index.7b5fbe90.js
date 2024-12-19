@@ -6030,7 +6030,7 @@ const gf = ce(ff, [
                   { class: "heroImage-btn font-tomkin_bold", onClick: s, },
                   [
                     B(a, { id: "arrow-right", icon: "arrow-line-right" }),
-                    "Buy $SkyNet"
+                    "Buy $SKYNET"
                   ]
                 ),
                 B(df, { class: "heroImage-mouse" }),
